@@ -19,6 +19,7 @@
 		AC8795C42B75943900F68707 /* ArtistsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BD2B75943900F68707 /* ArtistsView.swift */; };
 		AC8795C52B75943900F68707 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BE2B75943900F68707 /* ArtistsViewModel.swift */; };
 		AC8795C62B75943900F68707 /* ArtistsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BF2B75943900F68707 /* ArtistsEntity.swift */; };
+		AC8795CB2B75A05800F68707 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795CA2B75A05800F68707 /* Artist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		AC8795BD2B75943900F68707 /* ArtistsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsView.swift; sourceTree = "<group>"; };
 		AC8795BE2B75943900F68707 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		AC8795BF2B75943900F68707 /* ArtistsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsEntity.swift; sourceTree = "<group>"; };
+		AC8795CA2B75A05800F68707 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +106,11 @@
 		AC87958C2B758A2C00F68707 /* BitsoChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				AC8795B92B75941F00F68707 /* Artists */,
-				AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */,
 				AC8795932B758A2E00F68707 /* Assets.xcassets */,
+				AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */,
+				AC8795CC2B75A0D100F68707 /* Data */,
+				AC8795C82B75A03A00F68707 /* Domain */,
+				AC8795CD2B75A0DA00F68707 /* Features */,
 				AC8795952B758A2E00F68707 /* Preview Content */,
 			);
 			path = BitsoChallenge;
@@ -148,6 +152,37 @@
 				AC8795BC2B75943900F68707 /* ArtistsViewModel+Dependencies.swift */,
 			);
 			path = Artists;
+			sourceTree = "<group>";
+		};
+		AC8795C82B75A03A00F68707 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795C92B75A04200F68707 /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AC8795C92B75A04200F68707 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795CA2B75A05800F68707 /* Artist.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		AC8795CC2B75A0D100F68707 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AC8795CD2B75A0DA00F68707 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795B92B75941F00F68707 /* Artists */,
+			);
+			path = Features;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +321,7 @@
 				AC8795C12B75943900F68707 /* ArtistsFactory.swift in Sources */,
 				AC8795C62B75943900F68707 /* ArtistsEntity.swift in Sources */,
 				AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */,
+				AC8795CB2B75A05800F68707 /* Artist.swift in Sources */,
 				AC8795C52B75943900F68707 /* ArtistsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

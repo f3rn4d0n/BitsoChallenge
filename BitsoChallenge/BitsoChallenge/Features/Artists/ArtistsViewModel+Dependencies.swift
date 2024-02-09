@@ -12,7 +12,7 @@ public struct ArtistsDependencies {
     public init() { }
 }
 
-public protocol ArtistsViewModelType: ObservableObject {
+protocol ArtistsViewModelType: ObservableObject {
     
-    func download() async throws -> Void
+    func download(currentArtist artist: Artist?) async throws -> Void
 }

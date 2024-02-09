@@ -14,12 +14,12 @@ public protocol ArtistsRouterType {
     @ViewBuilder func goToView(for route: Route, path: Binding<NavigationPath>) -> Self.View
 }
 
-public struct ArtistsRouter: ArtistsRouterType {
+struct ArtistsRouter: ArtistsRouterType {
     
-    public func goToView(for route: ArtistsRouterEntity, path: Binding<NavigationPath>) -> some View {
+    func goToView(for route: ArtistsRouterEntity, path: Binding<NavigationPath>) -> some View {
         switch route {
-        case .detail:
-            Text("Hello")
+        case .detail(let artist):
+            Text("Hello \(artist.title)")
         }
     }
 }
