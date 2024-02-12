@@ -19,7 +19,7 @@ struct ArtworksRouter: ArtworksRouterType {
     func goToView(for route: ArtworksRouterEntity, path: Binding<NavigationPath>) -> some View {
         switch route {
         case .detail(let artwork):
-            Text("Hello \(artwork.title)")
+            ArtistFactory.makeArtist(path: path, artwork: artwork)
         }
     }
 }

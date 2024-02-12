@@ -33,6 +33,12 @@
 		AC8795FB2B7AA04F00F68707 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FA2B7AA04F00F68707 /* Artist.swift */; };
 		AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */; };
 		AC8796012B7AC9A700F68707 /* ArtworksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796002B7AC9A700F68707 /* ArtworksList.swift */; };
+		AC87960A2B7AD7B700F68707 /* ArtistFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796032B7AD7B700F68707 /* ArtistFactory.swift */; };
+		AC87960B2B7AD7B700F68707 /* ArtistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796042B7AD7B700F68707 /* ArtistRouter.swift */; };
+		AC87960C2B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */; };
+		AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796062B7AD7B700F68707 /* ArtistView.swift */; };
+		AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */; };
+		AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796082B7AD7B700F68707 /* ArtistEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +88,12 @@
 		AC8795FA2B7AA04F00F68707 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtworksUseCaseType.swift; sourceTree = "<group>"; };
 		AC8796002B7AC9A700F68707 /* ArtworksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksList.swift; sourceTree = "<group>"; };
+		AC8796032B7AD7B700F68707 /* ArtistFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistFactory.swift; sourceTree = "<group>"; };
+		AC8796042B7AD7B700F68707 /* ArtistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRouter.swift; sourceTree = "<group>"; };
+		AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistViewModel+Dependencies.swift"; sourceTree = "<group>"; };
+		AC8796062B7AD7B700F68707 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
+		AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		AC8796082B7AD7B700F68707 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +272,12 @@
 		AC8796022B7AD75C00F68707 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
+				AC8796082B7AD7B700F68707 /* ArtistEntity.swift */,
+				AC8796032B7AD7B700F68707 /* ArtistFactory.swift */,
+				AC8796042B7AD7B700F68707 /* ArtistRouter.swift */,
+				AC8796062B7AD7B700F68707 /* ArtistView.swift */,
+				AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */,
+				AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -395,8 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8795E22B75B6B800F68707 /* NetworkingService.swift in Sources */,
+				AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */,
+				AC87960A2B7AD7B700F68707 /* ArtistFactory.swift in Sources */,
+				AC87960C2B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift in Sources */,
 				AC8795C32B75943900F68707 /* ArtworksViewModel+Dependencies.swift in Sources */,
 				AC8795F92B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift in Sources */,
+				AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */,
 				AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */,
 				AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */,
 				AC8796012B7AC9A700F68707 /* ArtworksList.swift in Sources */,
@@ -404,6 +426,8 @@
 				AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */,
 				AC8795C42B75943900F68707 /* ArtworksView.swift in Sources */,
 				AC8795D72B75AEB900F68707 /* ArtworksEndpoint.swift in Sources */,
+				AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */,
+				AC87960B2B7AD7B700F68707 /* ArtistRouter.swift in Sources */,
 				AC8795C12B75943900F68707 /* ArtworksFactory.swift in Sources */,
 				AC8795C62B75943900F68707 /* ArtworksEntity.swift in Sources */,
 				AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */,
