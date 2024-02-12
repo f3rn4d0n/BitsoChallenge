@@ -15,9 +15,9 @@ enum ArtistEndpoint: NetworkTargetType {
     var path: String {
         switch self {
         case .fetchArtists:
-            return ""
+            return "artworks"
         case .detailArtist(let model):
-            return "\(model.artistId)"
+            return "artists/\(model.artistId)"
         }
     }
     

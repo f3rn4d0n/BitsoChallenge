@@ -12,11 +12,11 @@ public final class ArtistsViewModel: ArtistsViewModelType {
     private let dependencies: ArtistsDependencies
     @Published var artists: [Artist] = []
 
-    public init(dependencies: ArtistsDependencies) {
+    init(dependencies: ArtistsDependencies) {
         self.dependencies = dependencies
     }
 
     func download(currentArtist artist: Artist?) async -> Void {
-        return
+        artists = await dependencies.useCase.execute(page: nil)
     }
 }

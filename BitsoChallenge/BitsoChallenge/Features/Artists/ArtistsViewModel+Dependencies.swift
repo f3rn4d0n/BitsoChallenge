@@ -7,9 +7,13 @@
 
 import SwiftUI
 
-public struct ArtistsDependencies { 
+struct ArtistsDependencies {
 
-    public init() { }
+    let useCase: GetArtworksUseCaseType
+    
+    init(useCase: GetArtworksUseCaseType) {
+        self.useCase = useCase
+    }
 }
 
 protocol ArtistsViewModelType: ObservableObject {

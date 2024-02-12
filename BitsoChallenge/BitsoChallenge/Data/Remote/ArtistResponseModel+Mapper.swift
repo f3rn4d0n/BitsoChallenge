@@ -10,7 +10,20 @@ import Foundation
 extension ArtistResponseModel {
     
     func mapToArtist() -> [Artist] {
-        return []
+        return self.data.map{ $0.mapToArtist()}
+    }
+}
+
+extension ArtworksData {
+    func mapToArtist() -> Artist {
+        return .init(
+            id: self.id,
+            title: self.title,
+            description: self.description ?? "",
+            image: String(format: ApiConstants.imageTumbleUrl, arguments: [self.imageId]),
+            artist: self.artistTitle,
+            artistId: self.artistId
+        )
     }
 }
 

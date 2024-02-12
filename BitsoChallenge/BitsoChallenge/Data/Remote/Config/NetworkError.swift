@@ -11,5 +11,5 @@ enum NetworkError: Error {
     case invalidURL
     case invalidStatus(code: Int)
     case invalidResponse
-    case dataConversionFailure
+    case dataConversionFailure(error: String)
 }

@@ -35,12 +35,13 @@ struct RequestNetworkProvider: NetworkServiceType {
         
         try handleResponse(data: data, response: response)
         
-        let decoder = JSONDecoder()
         do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let decodedData = try decoder.decode(T.self, from: data)
             return decodedData
         } catch {
-            throw NetworkError.dataConversionFailure
+            throw NetworkError.dataConversionFailure(error: error.localizedDescription)
         }
     }
 }

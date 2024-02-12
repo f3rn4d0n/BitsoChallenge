@@ -11,7 +11,7 @@ struct ArtistsFactory {
     
     static func makeArtists() -> some View {
         
-        let dependencies = ArtistsDependencies()
+        let dependencies = ArtistsDependencies(useCase: GetArtworksUseCase(remoteDataSource: ArtistApi.shared))
         let viewModel = ArtistsViewModel(dependencies: dependencies)
         
         return ArtistsView(

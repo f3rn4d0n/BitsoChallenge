@@ -31,6 +31,7 @@
 		AC8795F72B7A9C7C00F68707 /* ArtistApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F62B7A9C7C00F68707 /* ArtistApi.swift */; };
 		AC8795F92B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F82B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift */; };
 		AC8795FB2B7AA04F00F68707 /* ArtistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FA2B7AA04F00F68707 /* ArtistDetail.swift */; };
+		AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		AC8795F62B7A9C7C00F68707 /* ArtistApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistApi.swift; sourceTree = "<group>"; };
 		AC8795F82B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistResponseModel+Mapper.swift"; sourceTree = "<group>"; };
 		AC8795FA2B7AA04F00F68707 /* ArtistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetail.swift; sourceTree = "<group>"; };
+		AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtworksUseCaseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		AC8795C82B75A03A00F68707 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				AC8795FC2B7AA30700F68707 /* UseCases */,
 				AC8795C92B75A04200F68707 /* Entities */,
 			);
 			path = Domain;
@@ -240,6 +243,14 @@
 				AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */,
 			);
 			path = Config;
+			sourceTree = "<group>";
+		};
+		AC8795FC2B7AA30700F68707 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +398,7 @@
 				AC8795FB2B7AA04F00F68707 /* ArtistDetail.swift in Sources */,
 				AC8795DC2B75B0B800F68707 /* ArtistRequestModel.swift in Sources */,
 				AC8795CB2B75A05800F68707 /* Artist.swift in Sources */,
+				AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */,
 				AC8795F52B7A942E00F68707 /* ArtistResponseModel.swift in Sources */,
 				AC8795F72B7A9C7C00F68707 /* ArtistApi.swift in Sources */,
 				AC8795D22B75AC1F00F68707 /* NetworkingDataSourceType.swift in Sources */,
