@@ -167,7 +167,7 @@
 			path = BitsoChallengeUITests;
 			sourceTree = "<group>";
 		};
-		AC8795B92B75941F00F68707 /* Artists */ = {
+		AC8795B92B75941F00F68707 /* Artworks */ = {
 			isa = PBXGroup;
 			children = (
 				AC8795BF2B75943900F68707 /* ArtworksEntity.swift */,
@@ -177,7 +177,7 @@
 				AC8795BE2B75943900F68707 /* ArtworksViewModel.swift */,
 				AC8795BC2B75943900F68707 /* ArtworksViewModel+Dependencies.swift */,
 			);
-			path = Artists;
+			path = Artworks;
 			sourceTree = "<group>";
 		};
 		AC8795C82B75A03A00F68707 /* Domain */ = {
@@ -211,7 +211,8 @@
 		AC8795CD2B75A0DA00F68707 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				AC8795B92B75941F00F68707 /* Artists */,
+				AC8796022B7AD75C00F68707 /* Artist */,
+				AC8795B92B75941F00F68707 /* Artworks */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -254,6 +255,13 @@
 				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
 			);
 			path = UseCases;
+			sourceTree = "<group>";
+		};
+		AC8796022B7AD75C00F68707 /* Artist */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Artist;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
