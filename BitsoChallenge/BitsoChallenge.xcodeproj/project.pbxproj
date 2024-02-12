@@ -20,6 +20,17 @@
 		AC8795C52B75943900F68707 /* ArtistsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BE2B75943900F68707 /* ArtistsViewModel.swift */; };
 		AC8795C62B75943900F68707 /* ArtistsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BF2B75943900F68707 /* ArtistsEntity.swift */; };
 		AC8795CB2B75A05800F68707 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795CA2B75A05800F68707 /* Artist.swift */; };
+		AC8795D22B75AC1F00F68707 /* NetworkingDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795D12B75AC1F00F68707 /* NetworkingDataSourceType.swift */; };
+		AC8795D72B75AEB900F68707 /* ArtistEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795D62B75AEB900F68707 /* ArtistEndpoint.swift */; };
+		AC8795DC2B75B0B800F68707 /* ArtistRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DB2B75B0B800F68707 /* ArtistRequestModel.swift */; };
+		AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */; };
+		AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DF2B75B49500F68707 /* NetworkError.swift */; };
+		AC8795E22B75B6B800F68707 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795E12B75B6B800F68707 /* NetworkingService.swift */; };
+		AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */; };
+		AC8795F52B7A942E00F68707 /* ArtistResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F42B7A942E00F68707 /* ArtistResponseModel.swift */; };
+		AC8795F72B7A9C7C00F68707 /* ArtistApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F62B7A9C7C00F68707 /* ArtistApi.swift */; };
+		AC8795F92B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F82B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift */; };
+		AC8795FB2B7AA04F00F68707 /* ArtistDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FA2B7AA04F00F68707 /* ArtistDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +67,17 @@
 		AC8795BE2B75943900F68707 /* ArtistsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsViewModel.swift; sourceTree = "<group>"; };
 		AC8795BF2B75943900F68707 /* ArtistsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsEntity.swift; sourceTree = "<group>"; };
 		AC8795CA2B75A05800F68707 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		AC8795D12B75AC1F00F68707 /* NetworkingDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingDataSourceType.swift; sourceTree = "<group>"; };
+		AC8795D62B75AEB900F68707 /* ArtistEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEndpoint.swift; sourceTree = "<group>"; };
+		AC8795DB2B75B0B800F68707 /* ArtistRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRequestModel.swift; sourceTree = "<group>"; };
+		AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
+		AC8795DF2B75B49500F68707 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		AC8795E12B75B6B800F68707 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTargetType.swift; sourceTree = "<group>"; };
+		AC8795F42B7A942E00F68707 /* ArtistResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistResponseModel.swift; sourceTree = "<group>"; };
+		AC8795F62B7A9C7C00F68707 /* ArtistApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistApi.swift; sourceTree = "<group>"; };
+		AC8795F82B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistResponseModel+Mapper.swift"; sourceTree = "<group>"; };
+		AC8795FA2B7AA04F00F68707 /* ArtistDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8795CA2B75A05800F68707 /* Artist.swift */,
+				AC8795FA2B7AA04F00F68707 /* ArtistDetail.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -173,6 +196,8 @@
 		AC8795CC2B75A0D100F68707 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				AC8795D52B75AE9D00F68707 /* Remote */,
+				AC8795CF2B75ABB300F68707 /* DataSources */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -183,6 +208,38 @@
 				AC8795B92B75941F00F68707 /* Artists */,
 			);
 			path = Features;
+			sourceTree = "<group>";
+		};
+		AC8795CF2B75ABB300F68707 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795D12B75AC1F00F68707 /* NetworkingDataSourceType.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		AC8795D52B75AE9D00F68707 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795F62B7A9C7C00F68707 /* ArtistApi.swift */,
+				AC8795D62B75AEB900F68707 /* ArtistEndpoint.swift */,
+				AC8795DB2B75B0B800F68707 /* ArtistRequestModel.swift */,
+				AC8795F42B7A942E00F68707 /* ArtistResponseModel.swift */,
+				AC8795F82B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift */,
+				AC8795D82B75AF5700F68707 /* Config */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		AC8795D82B75AF5700F68707 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */,
+				AC8795DF2B75B49500F68707 /* NetworkError.swift */,
+				AC8795E12B75B6B800F68707 /* NetworkingService.swift */,
+				AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,13 +372,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8795E22B75B6B800F68707 /* NetworkingService.swift in Sources */,
 				AC8795C32B75943900F68707 /* ArtistsViewModel+Dependencies.swift in Sources */,
+				AC8795F92B7A9F1400F68707 /* ArtistResponseModel+Mapper.swift in Sources */,
+				AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */,
+				AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */,
 				AC8795C22B75943900F68707 /* ArtistsRouter.swift in Sources */,
+				AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */,
 				AC8795C42B75943900F68707 /* ArtistsView.swift in Sources */,
+				AC8795D72B75AEB900F68707 /* ArtistEndpoint.swift in Sources */,
 				AC8795C12B75943900F68707 /* ArtistsFactory.swift in Sources */,
 				AC8795C62B75943900F68707 /* ArtistsEntity.swift in Sources */,
 				AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */,
+				AC8795FB2B7AA04F00F68707 /* ArtistDetail.swift in Sources */,
+				AC8795DC2B75B0B800F68707 /* ArtistRequestModel.swift in Sources */,
 				AC8795CB2B75A05800F68707 /* Artist.swift in Sources */,
+				AC8795F52B7A942E00F68707 /* ArtistResponseModel.swift in Sources */,
+				AC8795F72B7A9C7C00F68707 /* ArtistApi.swift in Sources */,
+				AC8795D22B75AC1F00F68707 /* NetworkingDataSourceType.swift in Sources */,
 				AC8795C52B75943900F68707 /* ArtistsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
