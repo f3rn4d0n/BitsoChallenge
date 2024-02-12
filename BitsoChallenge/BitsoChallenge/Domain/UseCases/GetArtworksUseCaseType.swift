@@ -8,7 +8,7 @@
 import Foundation
 
 protocol GetArtworksUseCaseType {
-    func execute(page: Int?) async -> [Artwork]
+    func execute(page: Int?) async -> Result<ArtworksList, Error>
 }
 
 struct GetArtworksUseCase: GetArtworksUseCaseType {
@@ -19,12 +19,11 @@ struct GetArtworksUseCase: GetArtworksUseCaseType {
         self.remoteDataSource = remoteDataSource
     }
     
-    func execute(page: Int? = nil) async -> [Artwork] {
+    func execute(page: Int? = nil) async -> Result<ArtworksList, Error> {
         do {
-            return try await remoteDataSource.getArtworks(page: page ?? 1, limit: 10)
+            return try await .success(remoteDataSource.getArtworks(page: page ?? 1, limit: 20))
         } catch {
-            print("Error fetchuing artworks: \(error)")
-            return []
+            return .failure(error)
         }
     }
 }

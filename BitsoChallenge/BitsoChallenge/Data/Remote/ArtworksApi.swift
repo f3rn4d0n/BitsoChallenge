@@ -17,7 +17,7 @@ struct ArtworksApi: ArtworkRemoteDataSourceType {
         service = RequestNetworkProvider()
     }
     
-    func getArtworks(page: Int, limit: Int) async throws -> [Artwork] {
+    func getArtworks(page: Int, limit: Int) async throws -> ArtworksList {
         
         let requestModel = ArtworksRequestModel(page: page, limit: limit)
         let endpoint = ArtworksEndpoint.fetchArtworks(model: requestModel)

@@ -25,10 +25,10 @@ struct ArtworkData: Decodable {
     let id: Int
     let title: String
     let description: String?
-    let artistId: Int
-    let artistTitle: String
-    let artistDisplay: String
-    let imageId: String
+    let artistId: Int?
+    let artistTitle: String?
+    let artistDisplay: String?
+    let imageId: String?
 }
 
 struct ArtistResponseModel: Decodable {
