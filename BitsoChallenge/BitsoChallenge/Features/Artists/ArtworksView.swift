@@ -1,5 +1,5 @@
 //
-//  ArtistsView.swift
+//  ArtworksView.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArtistsView<ViewModel: ArtistsViewModel, Router: ArtistsRouterType>: View where Router.Route == ArtistsRouterEntity {
+struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: View where Router.Route == ArtworksRouterEntity {
     
     private let router: Router
     @State var path  = NavigationPath()
@@ -22,32 +22,32 @@ struct ArtistsView<ViewModel: ArtistsViewModel, Router: ArtistsRouterType>: View
     var body: some View {
         NavigationStack(path: $path) {
             List {
-                ForEach(viewModel.artists) { artist in
+                ForEach(viewModel.artworks) { artwork in
                     Button {
-                        path.append(ArtistsRouterEntity.detail(artist: artist))
+                        path.append(ArtworksRouterEntity.detail(artwork: artwork))
                     } label: {
-                        Text("Artist: \(artist.title)")
+                        Text("Title: \(artwork.title)")
                     }
                     .onAppear {
                         Task{
-                            await viewModel.download(currentArtist: artist)
+                            await viewModel.download(currentArtwork: artwork)
                         }
                     }
                 }
             }
             .refreshable {
                 Task{
-                    await viewModel.download(currentArtist: nil)
+                    await viewModel.download(currentArtwork: nil)
                 }
             }
-            .navigationDestination(for: ArtistsRouterEntity.self) { option in
+            .navigationDestination(for: ArtworksRouterEntity.self) { option in
                 router.goToView(for: option, path: $path)
             }
-            .navigationTitle("Artists")
+            .navigationTitle("Artworks")
             .overlay {
-                if viewModel.artists.isEmpty {
+                if viewModel.artworks.isEmpty {
                     ContentUnavailableView {
-                        Label("No aritst founded", systemImage: "book.fill")
+                        Label("No artworks founded", systemImage: "book.fill")
                     } description: {
                         Text("Pull to refresh")
                     }
@@ -59,10 +59,10 @@ struct ArtistsView<ViewModel: ArtistsViewModel, Router: ArtistsRouterType>: View
 
 #Preview {
     @State var path = NavigationPath()
-    return ArtistsView(
-        router: ArtistsRouter(),
-        viewModel: ArtistsViewModel(
-            dependencies: .init(useCase: GetArtworksUseCase(remoteDataSource: ArtistApi.shared))
+    return ArtworksView(
+        router: ArtworksRouter(),
+        viewModel: ArtworksViewModel(
+            dependencies: .init(useCase: GetArtworksUseCase(remoteDataSource: ArtworksApi.shared))
         )
     )
 }

@@ -1,5 +1,5 @@
 //
-//  ArtistRouter.swift
+//  ArtworksEndpoint.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -7,27 +7,27 @@
 
 import Foundation
 
-enum ArtistEndpoint: NetworkTargetType {
+enum ArtworksEndpoint: NetworkTargetType {
     
-    case fetchArtists(model: ArtistRequestModel)
-    case detailArtist(model: ArtistDetailRequestModel)
+    case fetchArtworks(model: ArtworksRequestModel)
+    case getArtist(model: ArtistRequestModel)
     
     var path: String {
         switch self {
-        case .fetchArtists:
+        case .fetchArtworks:
             return "artworks"
-        case .detailArtist(let model):
+        case .getArtist(let model):
             return "artists/\(model.artistId)"
         }
     }
     
     var queryParams: [URLQueryItem] {
         switch self {
-        case .fetchArtists(let model):
+        case .fetchArtworks(let model):
             let limit = URLQueryItem(name: "limit", value: "\(model.limit)")
             let page = URLQueryItem(name: "page", value: "\(model.page)")
             return [limit, page]
-        case .detailArtist:
+        case .getArtist:
             return []
         }
     }

@@ -1,5 +1,5 @@
 //
-//  ArtistsRouter.swift
+//  ArtworksRouter.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -8,18 +8,18 @@
 import Foundation
 import SwiftUI
 
-public protocol ArtistsRouterType {
+public protocol ArtworksRouterType {
     associatedtype Route
     associatedtype View: SwiftUI.View
     @ViewBuilder func goToView(for route: Route, path: Binding<NavigationPath>) -> Self.View
 }
 
-struct ArtistsRouter: ArtistsRouterType {
+struct ArtworksRouter: ArtworksRouterType {
     
-    func goToView(for route: ArtistsRouterEntity, path: Binding<NavigationPath>) -> some View {
+    func goToView(for route: ArtworksRouterEntity, path: Binding<NavigationPath>) -> some View {
         switch route {
-        case .detail(let artist):
-            Text("Hello \(artist.title)")
+        case .detail(let artwork):
+            Text("Hello \(artwork.title)")
         }
     }
 }

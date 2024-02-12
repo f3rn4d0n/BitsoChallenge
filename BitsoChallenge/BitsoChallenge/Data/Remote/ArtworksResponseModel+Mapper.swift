@@ -1,5 +1,5 @@
 //
-//  ArtistResponseModel+Mapper.swift
+//  ArtworksResponseModel+Mapper.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 12/02/24.
@@ -7,15 +7,15 @@
 
 import Foundation
 
-extension ArtistResponseModel {
+extension ArtworksResponseModel {
     
-    func mapToArtist() -> [Artist] {
-        return self.data.map{ $0.mapToArtist()}
+    func mapToArtworks() -> [Artwork] {
+        return self.data.map{ $0.mapToArtwork()}
     }
 }
 
-extension ArtworksData {
-    func mapToArtist() -> Artist {
+extension ArtworkData {
+    func mapToArtwork() -> Artwork {
         return .init(
             id: self.id,
             title: self.title,
@@ -27,9 +27,9 @@ extension ArtworksData {
     }
 }
 
-extension ArtistDetailResponseModel {
+extension ArtistResponseModel {
     
-    func mapToArtist() -> ArtistDetail {
-        return ArtistDetail()
+    func mapToArtist() -> Artist {
+        return Artist()
     }
 }

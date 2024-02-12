@@ -1,5 +1,5 @@
 //
-//  ArtistRequestModel.swift
+//  ArtworksRequestModel.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ArtistRequestModel {
+struct ArtworksRequestModel {
     let page: Int
     let limit: Int
 }
 
-struct ArtistDetailRequestModel {
+struct ArtistRequestModel {
     let artistId: Int
 }

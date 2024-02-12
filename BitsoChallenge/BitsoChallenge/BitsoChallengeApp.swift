@@ -24,7 +24,7 @@ struct BitsoChallengeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ArtistsFactory.makeArtists()
+            ArtworksFactory.makeArtworks()
         }
         .modelContainer(sharedModelContainer)
     }

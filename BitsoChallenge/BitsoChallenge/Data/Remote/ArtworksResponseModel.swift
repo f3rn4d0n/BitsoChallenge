@@ -1,5 +1,5 @@
 //
-//  ArtistResponseModel.swift
+//  ArtworksResponseModel.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 12/02/24.
@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct ArtistResponseModel: Decodable {
+struct ArtworksResponseModel: Decodable {
     let pagination: ArtworksPagination
-    let data: [ArtworksData]
+    let data: [ArtworkData]
 }
 
 struct ArtworksPagination: Decodable {
@@ -21,7 +21,7 @@ struct ArtworksPagination: Decodable {
     let nextUrl: String
 }
 
-struct ArtworksData: Decodable {
+struct ArtworkData: Decodable {
     let id: Int
     let title: String
     let description: String?
@@ -31,6 +31,6 @@ struct ArtworksData: Decodable {
     let imageId: String
 }
 
-struct ArtistDetailResponseModel: Decodable {
+struct ArtistResponseModel: Decodable {
     
 }

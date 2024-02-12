@@ -1,5 +1,5 @@
 //
-//  NetworkingDataSourceType.swift
+//  ArtworkRemoteDataSourceType.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -7,8 +7,8 @@
 
 import Foundation
 
- protocol ArtistRemoteDataSourceType {
+ protocol ArtworkRemoteDataSourceType {
     
-     func getArtists(page: Int, limit: Int) async throws -> [Artist]
-     func getArtistDetail(artistId: Int) async throws -> ArtistDetail
+     func getArtworks(page: Int, limit: Int) async throws -> [Artwork]
+     func getArtist(id: Int) async throws -> Artist
 }

@@ -1,5 +1,5 @@
 //
-//  ArtistsViewModel+Dependencies.swift
+//  ArtworksViewModel+Dependencies.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 08/02/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ArtistsDependencies {
+struct ArtworksDependencies {
 
     let useCase: GetArtworksUseCaseType
     
@@ -16,7 +16,7 @@ struct ArtistsDependencies {
     }
 }
 
-protocol ArtistsViewModelType: ObservableObject {
+protocol ArtworksViewModelType: ObservableObject {
     
-    func download(currentArtist artist: Artist?) async throws -> Void
+    func download(currentArtwork artwork: Artwork?) async throws -> Void
 }

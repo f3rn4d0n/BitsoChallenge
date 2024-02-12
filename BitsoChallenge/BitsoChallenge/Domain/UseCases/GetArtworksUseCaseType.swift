@@ -8,20 +8,20 @@
 import Foundation
 
 protocol GetArtworksUseCaseType {
-    func execute(page: Int?) async -> [Artist]
+    func execute(page: Int?) async -> [Artwork]
 }
 
 struct GetArtworksUseCase: GetArtworksUseCaseType {
     
-    let remoteDataSource: ArtistRemoteDataSourceType
+    let remoteDataSource: ArtworkRemoteDataSourceType
     
-    init(remoteDataSource: ArtistRemoteDataSourceType) {
+    init(remoteDataSource: ArtworkRemoteDataSourceType) {
         self.remoteDataSource = remoteDataSource
     }
     
-    func execute(page: Int? = nil) async -> [Artist] {
+    func execute(page: Int? = nil) async -> [Artwork] {
         do {
-            return try await remoteDataSource.getArtists(page: page ?? 1, limit: 10)
+            return try await remoteDataSource.getArtworks(page: page ?? 1, limit: 10)
         } catch {
             print("Error fetchuing artworks: \(error)")
             return []
