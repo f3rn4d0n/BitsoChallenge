@@ -12,4 +12,30 @@ enum ArtistRouterEntity: Equatable, Hashable {
 
 struct ArtistViewEntity {
     var artworkTitle: String
+    var artworkImage: String?
+    var artworkDate: String?
+    var artworkDetail: String
+    var artistTitle: String?
+    var artistBorn: String?
+    var artistAltNames: String?
+    
+    init(artwork: Artwork) {
+        self.artworkTitle = artwork.title
+        self.artworkImage = artwork.image
+        self.artworkDate = artwork.date
+        self.artistTitle = artwork.artist
+        self.artistBorn = nil
+        self.artworkDetail = artwork.description
+        self.artistAltNames = nil
+    }
+    
+    init(artwork: Artwork, artist: Artist) {
+        self.artworkTitle = artwork.title
+        self.artworkImage = artwork.image
+        self.artworkDate = artwork.date
+        self.artistTitle = artist.title
+        self.artistBorn = artist.lifePeriod
+        self.artworkDetail = artwork.description
+        self.artistAltNames = artist.altNames
+    }
 }

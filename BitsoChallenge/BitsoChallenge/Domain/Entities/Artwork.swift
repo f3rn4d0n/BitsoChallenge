@@ -11,7 +11,9 @@ struct Artwork: Hashable, Identifiable {
     let id: Int
     let title: String
     let description: String
+    let date: String?
     let image: String?
+    let thumbnail: String?
     let artist: String?
     let artistId: Int?
 }

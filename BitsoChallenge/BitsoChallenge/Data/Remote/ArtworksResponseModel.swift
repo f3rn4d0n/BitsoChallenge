@@ -24,11 +24,12 @@ struct ArtworksPagination: Decodable {
 struct ArtworkData: Decodable {
     let id: Int
     let title: String
-    let description: String?
+    let mediumDisplay: String?
     let artistId: Int?
     let artistTitle: String?
     let artistDisplay: String?
     let imageId: String?
+    let dateDisplay: String?
 }
 
 struct ArtistResponseModel: Decodable {
@@ -42,4 +43,5 @@ struct ArtistData: Decodable {
     let birthDate: Int?
     let deathDate: Int?
     let description: String?
+    let altTitles: [String]?
 }

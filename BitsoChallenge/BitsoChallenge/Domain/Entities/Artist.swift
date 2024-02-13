@@ -11,6 +11,7 @@ struct Artist {
     
     let id: Int
     let title: String
-    let lifePeriod: String
+    let lifePeriod: String?
     let description: String?
+    let altNames: String?
 }

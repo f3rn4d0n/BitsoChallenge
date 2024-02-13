@@ -25,10 +25,10 @@ public final class ArtworksViewModel: ArtworksViewModelType {
             let artworksList = await dependencies.useCase.execute(page: currentPage + 1)
             switch artworksList {
             case .success(let success):
-                DispatchQueue.main.async {
-                    self.currentPage = success.currentPage
-                    self.totalPages = success.totalPage
-                    self.artworks.append(contentsOf: success.artworks)
+                DispatchQueue.main.async { [weak self] in
+                    self?.currentPage = success.currentPage
+                    self?.totalPages = success.totalPage
+                    self?.artworks.append(contentsOf: success.artworks)
                 }
             case .failure(let failure):
                 print("Error: \(failure.localizedDescription)")
