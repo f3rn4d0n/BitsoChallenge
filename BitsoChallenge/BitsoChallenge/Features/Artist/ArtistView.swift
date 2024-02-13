@@ -43,7 +43,12 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     @State var path = NavigationPath()
     return ArtistView(
         router: ArtistRouter(),
-        viewModel: ArtistViewModel(dependencies: .init(artwork: .init(id: 1, title: "", description: "", image: nil, artist: nil, artistId: nil))),
+        viewModel: ArtistViewModel(
+            dependencies: .init(
+                artwork: .init(id: 1, title: "", description: "", image: nil, artist: nil, artistId: nil),
+                useCase: GetArtistUseCase(remoteDataSource: ArtworksApi.shared)
+            )
+        ),
         path: $path
     )
 }

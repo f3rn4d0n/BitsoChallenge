@@ -39,6 +39,26 @@ extension ArtworkData {
 extension ArtistResponseModel {
     
     func mapToArtist() -> Artist {
-        return Artist()
+        return self.data.mapToArtist()
+    }
+}
+
+extension ArtistData {
+    
+    func mapToArtist() -> Artist {
+        
+        var period = ""
+        if let birth = self.birthDate {
+            period = "\(birth)"
+            if let death = self.deathDate {
+                period.append(contentsOf: ", \(death)")
+            }
+        }
+        
+        return .init(
+            id: self.id,
+            title: self.title,
+            lifePeriod: period,
+            description: self.description)
     }
 }

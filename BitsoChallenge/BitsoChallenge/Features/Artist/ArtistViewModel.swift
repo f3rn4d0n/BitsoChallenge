@@ -21,6 +21,14 @@ final class ArtistViewModel: ArtistViewModelType {
     }
 
     func getInfo() async -> Void {
-        
+        if let artistId = dependencies.artwork.artistId {
+            let artistResponse = await dependencies.useCase.execute(artistId: artistId)
+            switch artistResponse {
+            case .success(let success):
+                print(success)
+            case .failure(let failure):
+                print("Error: \(failure.localizedDescription)")
+            }
+        }
     }
 }

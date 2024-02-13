@@ -32,5 +32,14 @@ struct ArtworkData: Decodable {
 }
 
 struct ArtistResponseModel: Decodable {
+    let data: ArtistData
+}
+
+struct ArtistData: Decodable {
     
+    let id: Int
+    let title: String
+    let birthDate: Int?
+    let deathDate: Int?
+    let description: String?
 }

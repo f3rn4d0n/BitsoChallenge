@@ -10,9 +10,11 @@ import SwiftUI
 struct ArtistDependencies {
     
     let artwork: Artwork
+    let useCase: GetArtistUseCaseType
 
-    public init(artwork: Artwork) {
+    public init(artwork: Artwork, useCase: GetArtistUseCaseType) {
         self.artwork = artwork
+        self.useCase = useCase
     }
 }
 

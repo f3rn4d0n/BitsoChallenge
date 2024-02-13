@@ -39,6 +39,7 @@
 		AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796062B7AD7B700F68707 /* ArtistView.swift */; };
 		AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */; };
 		AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796082B7AD7B700F68707 /* ArtistEntity.swift */; };
+		AC8796122B7AE0CD00F68707 /* GetArtistUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		AC8796062B7AD7B700F68707 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
 		AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		AC8796082B7AD7B700F68707 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
+		AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistUseCaseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
+				AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 				AC8795C62B75943900F68707 /* ArtworksEntity.swift in Sources */,
 				AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */,
 				AC8795FB2B7AA04F00F68707 /* Artist.swift in Sources */,
+				AC8796122B7AE0CD00F68707 /* GetArtistUseCaseType.swift in Sources */,
 				AC8795DC2B75B0B800F68707 /* ArtworksRequestModel.swift in Sources */,
 				AC8795CB2B75A05800F68707 /* Artwork.swift in Sources */,
 				AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */,

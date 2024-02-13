@@ -11,7 +11,7 @@ struct ArtistFactory {
     
     static func makeArtist(path: Binding<NavigationPath>, artwork: Artwork) -> some View {
         
-        let dependencies = ArtistDependencies(artwork: artwork)
+        let dependencies = ArtistDependencies(artwork: artwork, useCase: GetArtistUseCase(remoteDataSource: ArtworksApi.shared))
         let viewModel = ArtistViewModel(dependencies: dependencies)
         
         return ArtistView(

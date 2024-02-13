@@ -9,4 +9,8 @@ import Foundation
 
 struct Artist {
     
+    let id: Int
+    let title: String
+    let lifePeriod: String
+    let description: String?
 }
