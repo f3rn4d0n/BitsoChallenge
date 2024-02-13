@@ -40,6 +40,7 @@
 		AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */; };
 		AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796082B7AD7B700F68707 /* ArtistEntity.swift */; };
 		AC8796122B7AE0CD00F68707 /* GetArtistUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */; };
+		AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796152B7BFBE000F68707 /* ArtworkImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		AC8796082B7AD7B700F68707 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
 		AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistUseCaseType.swift; sourceTree = "<group>"; };
+		AC8796152B7BFBE000F68707 /* ArtworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			children = (
 				AC8795932B758A2E00F68707 /* Assets.xcassets */,
 				AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */,
+				AC8796142B7BFBCE00F68707 /* Core */,
 				AC8795CC2B75A0D100F68707 /* Data */,
 				AC8795C82B75A03A00F68707 /* Domain */,
 				AC8795CD2B75A0DA00F68707 /* Features */,
@@ -283,6 +286,14 @@
 				AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */,
 			);
 			path = Artist;
+			sourceTree = "<group>";
+		};
+		AC8796142B7BFBCE00F68707 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				AC8796152B7BFBE000F68707 /* ArtworkImage.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +438,7 @@
 				AC8796012B7AC9A700F68707 /* ArtworksList.swift in Sources */,
 				AC8795C22B75943900F68707 /* ArtworksRouter.swift in Sources */,
 				AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */,
+				AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */,
 				AC8795C42B75943900F68707 /* ArtworksView.swift in Sources */,
 				AC8795D72B75AEB900F68707 /* ArtworksEndpoint.swift in Sources */,
 				AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */,

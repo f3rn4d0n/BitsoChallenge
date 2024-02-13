@@ -23,11 +23,7 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
         NavigationStack(path: $path) {
             List {
                 ForEach(viewModel.artworks) { artwork in
-                    Button {
-                        path.append(ArtworksRouterEntity.detail(artwork: artwork))
-                    } label: {
-                        Text("Title: \(artwork.title)")
-                    }
+                    artworkView(artwork)
                     .onAppear {
                         Task{
                             await viewModel.download(currentArtwork: artwork)
@@ -44,6 +40,13 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                 router.goToView(for: option, path: $path)
             }
             .navigationTitle("Artworks")
+            .toolbar {
+                if viewModel.isLoading {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        ProgressView()
+                    }
+                }
+            }
             .overlay {
                 if viewModel.artworks.isEmpty {
                     ContentUnavailableView {
@@ -52,6 +55,20 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                         Text("Pull to refresh")
                     }
                 }
+            }
+        }
+    }
+    
+    func artworkView(_ artwork: Artwork) -> some View {
+        Button {
+            path.append(ArtworksRouterEntity.detail(artwork: artwork))
+        } label: {
+            HStack {
+                ArtworkImage(artworkImage: artwork.thumbnail)
+                        .frame(width: 40, height: 40)
+                Text("\(artwork.title)")
+                    .font(.callout)
+                    .foregroundStyle(.black)
             }
         }
     }

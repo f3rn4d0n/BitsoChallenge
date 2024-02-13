@@ -25,7 +25,7 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     
     var body: some View {
         VStack {
-            artworkImage
+            ArtworkImage(artworkImage: viewModel.artistEntity.artworkImage)
                 .frame(width: 250, height: 250)
             subtitleView
             artworkDescriptionView
@@ -39,35 +39,6 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
         }
         .navigationTitle(viewModel.artistEntity.artworkTitle)
         .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    @ViewBuilder
-    var artworkImage: some View {
-        if let urlString = viewModel.artistEntity.artworkImage {
-            AsyncImage(url: URL(string: urlString), scale: 3) { phase in
-                switch phase {
-                case .empty:
-                    ZStack {
-                        Color.gray
-                        ProgressView()
-                    }
-                case .success(let image):
-                    image.resizable()
-                case .failure(let imageError):
-                    Image(systemName: "person.crop.circle.badge.questionmark.fill")
-                        .resizable()
-                        .padding()
-                        .onAppear{
-                            print("for \(urlString) error:\(imageError.localizedDescription)")
-                        }
-                @unknown default:
-                    EmptyView()
-                }
-            }
-        } else {
-            Image(systemName: "person.crop.circle.badge.questionmark.fill")
-                .padding()
-        }
     }
     
     @ViewBuilder
