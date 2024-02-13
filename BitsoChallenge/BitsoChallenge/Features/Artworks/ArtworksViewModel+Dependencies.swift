@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ArtworksDependencies {
 
-    let useCase: GetArtworksUseCaseType
+    let getRemoteUseCase: GetArtworksUseCaseType
+    let getLocalUseCase: GetLocalArtworksUseCaseType
+    let saveLocalUseCase: SaveLocalArtworksUseCaseType
+    let clearLocalUseCase: ClearLocalArtworksUseCaseType
     
-    init(useCase: GetArtworksUseCaseType) {
-        self.useCase = useCase
+    init(getRemoteUseCase: GetArtworksUseCaseType, 
+         getLocalUseCase: GetLocalArtworksUseCaseType,
+         saveLocalUseCase: SaveLocalArtworksUseCaseType,
+         clearLocalUseCase: ClearLocalArtworksUseCaseType) {
+        self.getRemoteUseCase = getRemoteUseCase
+        self.getLocalUseCase = getLocalUseCase
+        self.saveLocalUseCase = saveLocalUseCase
+        self.clearLocalUseCase = clearLocalUseCase
     }
 }
 
 protocol ArtworksViewModelType: ObservableObject {
     
-    func download(currentArtwork artwork: Artwork?) async throws -> Void
+    func download(currentArtwork artwork: Artwork?) async
+    func requestLocalArtworks() async
 }

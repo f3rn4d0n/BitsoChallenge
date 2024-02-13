@@ -47,6 +47,7 @@
 		AC8796212B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */; };
 		AC8796242B7C103100F68707 /* LocalDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796232B7C103100F68707 /* LocalDataError.swift */; };
 		AC8796262B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */; };
+		AC8796282B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
 		AC8796232B7C103100F68707 /* LocalDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataError.swift; sourceTree = "<group>"; };
 		AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
+		AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,9 +285,10 @@
 		AC8795FC2B7AA30700F68707 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
-				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
 				AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */,
+				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
 				AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */,
+				AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */,
 				AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */,
 			);
 			path = UseCases;
@@ -468,6 +471,7 @@
 				AC8795C32B75943900F68707 /* ArtworksViewModel+Dependencies.swift in Sources */,
 				AC8795F92B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift in Sources */,
 				AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */,
+				AC8796282B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift in Sources */,
 				AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */,
 				AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */,
 				AC8796262B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift in Sources */,
