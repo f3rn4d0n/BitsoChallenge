@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ArtworksList {
+struct ArtworksList: Codable {
     let currentPage: Int
     let totalPage: Int
     let artworks: [Artwork]

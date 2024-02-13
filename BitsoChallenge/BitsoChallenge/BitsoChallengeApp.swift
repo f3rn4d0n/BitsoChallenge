@@ -12,6 +12,7 @@ import SwiftData
 struct BitsoChallengeApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
+            ArtworksLocalModel.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
