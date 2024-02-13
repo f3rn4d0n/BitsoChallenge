@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
 
 struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: View where Router.Route == ArtworksRouterEntity {
     
@@ -82,25 +83,10 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
 #Preview {
     @State var path = NavigationPath()
     
-    func createDependencies() -> ArtworksDependencies {
-        let localDataSource = ArtworksLocalApi(container: BitsoChallengeApp().sharedModelContainer)
-        let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi.shared)
-        let getLocalUseCase = GetLocalArtworksUseCase(localDataSource: localDataSource)
-        let saveLocalUseCase = SaveLocalArtworksUseCase(localDataSource: localDataSource)
-        let clearLocalUseCase = ClearLocalArtworksUseCase(localDataSource: localDataSource)
-        
-        return ArtworksDependencies(
-            getRemoteUseCase: getRemoteUseCase,
-            getLocalUseCase: getLocalUseCase,
-            saveLocalUseCase: saveLocalUseCase,
-            clearLocalUseCase: clearLocalUseCase
-        )
-    }
-    
     return ArtworksView(
         router: ArtworksRouter(),
         viewModel: ArtworksViewModel(
-            dependencies: createDependencies()
+            dependencies: ArtworksDependenciesTest.dependencies()
         )
     )
 }

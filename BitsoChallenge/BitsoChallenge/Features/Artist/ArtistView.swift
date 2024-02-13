@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
 
 struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View where Router.Route == ArtistRouterEntity {
     
@@ -87,12 +88,7 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     @State var path = NavigationPath()
     return ArtistView(
         router: ArtistRouter(),
-        viewModel: ArtistViewModel(
-            dependencies: .init(
-                artwork: .init(id: 1, title: "", description: "", date: nil, image: nil, thumbnail: nil, artist: nil, artistId: nil),
-                useCase: GetArtistUseCase(remoteDataSource: ArtworksApi.shared)
-            )
-        ),
+        viewModel: ArtistViewModel(dependencies: ArtistDependenciesTest.dependencies()),
         path: $path
     )
 }

@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
+import BitsoChallengeDomain
 
 struct ArtworksDependencies {
 

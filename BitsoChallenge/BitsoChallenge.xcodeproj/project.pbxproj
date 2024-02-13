@@ -19,35 +19,21 @@
 		AC8795C42B75943900F68707 /* ArtworksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BD2B75943900F68707 /* ArtworksView.swift */; };
 		AC8795C52B75943900F68707 /* ArtworksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BE2B75943900F68707 /* ArtworksViewModel.swift */; };
 		AC8795C62B75943900F68707 /* ArtworksEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BF2B75943900F68707 /* ArtworksEntity.swift */; };
-		AC8795CB2B75A05800F68707 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795CA2B75A05800F68707 /* Artwork.swift */; };
-		AC8795D22B75AC1F00F68707 /* ArtworkRemoteDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795D12B75AC1F00F68707 /* ArtworkRemoteDataSourceType.swift */; };
-		AC8795D72B75AEB900F68707 /* ArtworksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795D62B75AEB900F68707 /* ArtworksEndpoint.swift */; };
-		AC8795DC2B75B0B800F68707 /* ArtworksRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DB2B75B0B800F68707 /* ArtworksRequestModel.swift */; };
-		AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */; };
-		AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795DF2B75B49500F68707 /* NetworkError.swift */; };
-		AC8795E22B75B6B800F68707 /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795E12B75B6B800F68707 /* NetworkingService.swift */; };
-		AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */; };
-		AC8795F52B7A942E00F68707 /* ArtworksResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F42B7A942E00F68707 /* ArtworksResponseModel.swift */; };
-		AC8795F72B7A9C7C00F68707 /* ArtworksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F62B7A9C7C00F68707 /* ArtworksApi.swift */; };
-		AC8795F92B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795F82B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift */; };
-		AC8795FB2B7AA04F00F68707 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FA2B7AA04F00F68707 /* Artist.swift */; };
-		AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */; };
-		AC8796012B7AC9A700F68707 /* ArtworksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796002B7AC9A700F68707 /* ArtworksList.swift */; };
 		AC87960A2B7AD7B700F68707 /* ArtistFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796032B7AD7B700F68707 /* ArtistFactory.swift */; };
 		AC87960B2B7AD7B700F68707 /* ArtistRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796042B7AD7B700F68707 /* ArtistRouter.swift */; };
 		AC87960C2B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */; };
 		AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796062B7AD7B700F68707 /* ArtistView.swift */; };
 		AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */; };
 		AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796082B7AD7B700F68707 /* ArtistEntity.swift */; };
-		AC8796122B7AE0CD00F68707 /* GetArtistUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */; };
 		AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796152B7BFBE000F68707 /* ArtworkImage.swift */; };
-		AC8796192B7C07C800F68707 /* ArtworkLocalDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796182B7C07C800F68707 /* ArtworkLocalDataSourceType.swift */; };
-		AC87961B2B7C086700F68707 /* ArtworksLocalApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87961A2B7C086700F68707 /* ArtworksLocalApi.swift */; };
-		AC87961D2B7C0AAD00F68707 /* ArtworksLocalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87961C2B7C0AAD00F68707 /* ArtworksLocalModel.swift */; };
-		AC8796212B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */; };
-		AC8796242B7C103100F68707 /* LocalDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796232B7C103100F68707 /* LocalDataError.swift */; };
-		AC8796262B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */; };
-		AC8796282B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */; };
+		AC8796B22B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */; };
+		AC8796B32B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC8796B62B7C2B9F00F68707 /* BitsoChallengeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */; };
+		AC8796B72B7C2B9F00F68707 /* BitsoChallengeData.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC8796EB2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */; };
+		AC8796EC2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AC8796EE2B7C31C900F68707 /* ArtworksDependenciesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */; };
+		AC8796F02B7C324B00F68707 /* ArtistDependenciesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +53,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		AC8796B42B7C2B8F00F68707 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				AC8796B72B7C2B9F00F68707 /* BitsoChallengeData.framework in Embed Frameworks */,
+				AC8796B32B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Embed Frameworks */,
+				AC8796EC2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		AC87958A2B758A2C00F68707 /* BitsoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitsoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoChallengeApp.swift; sourceTree = "<group>"; };
@@ -83,35 +85,19 @@
 		AC8795BD2B75943900F68707 /* ArtworksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksView.swift; sourceTree = "<group>"; };
 		AC8795BE2B75943900F68707 /* ArtworksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksViewModel.swift; sourceTree = "<group>"; };
 		AC8795BF2B75943900F68707 /* ArtworksEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksEntity.swift; sourceTree = "<group>"; };
-		AC8795CA2B75A05800F68707 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		AC8795D12B75AC1F00F68707 /* ArtworkRemoteDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkRemoteDataSourceType.swift; sourceTree = "<group>"; };
-		AC8795D62B75AEB900F68707 /* ArtworksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksEndpoint.swift; sourceTree = "<group>"; };
-		AC8795DB2B75B0B800F68707 /* ArtworksRequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRequestModel.swift; sourceTree = "<group>"; };
-		AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
-		AC8795DF2B75B49500F68707 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		AC8795E12B75B6B800F68707 /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
-		AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTargetType.swift; sourceTree = "<group>"; };
-		AC8795F42B7A942E00F68707 /* ArtworksResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksResponseModel.swift; sourceTree = "<group>"; };
-		AC8795F62B7A9C7C00F68707 /* ArtworksApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksApi.swift; sourceTree = "<group>"; };
-		AC8795F82B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtworksResponseModel+Mapper.swift"; sourceTree = "<group>"; };
-		AC8795FA2B7AA04F00F68707 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtworksUseCaseType.swift; sourceTree = "<group>"; };
-		AC8796002B7AC9A700F68707 /* ArtworksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksList.swift; sourceTree = "<group>"; };
 		AC8796032B7AD7B700F68707 /* ArtistFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistFactory.swift; sourceTree = "<group>"; };
 		AC8796042B7AD7B700F68707 /* ArtistRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRouter.swift; sourceTree = "<group>"; };
 		AC8796052B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistViewModel+Dependencies.swift"; sourceTree = "<group>"; };
 		AC8796062B7AD7B700F68707 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
 		AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		AC8796082B7AD7B700F68707 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
-		AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetArtistUseCaseType.swift; sourceTree = "<group>"; };
 		AC8796152B7BFBE000F68707 /* ArtworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImage.swift; sourceTree = "<group>"; };
-		AC8796182B7C07C800F68707 /* ArtworkLocalDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkLocalDataSourceType.swift; sourceTree = "<group>"; };
-		AC87961A2B7C086700F68707 /* ArtworksLocalApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksLocalApi.swift; sourceTree = "<group>"; };
-		AC87961C2B7C0AAD00F68707 /* ArtworksLocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksLocalModel.swift; sourceTree = "<group>"; };
-		AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
-		AC8796232B7C103100F68707 /* LocalDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataError.swift; sourceTree = "<group>"; };
-		AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
-		AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearLocalArtworksUseCaseType.swift; sourceTree = "<group>"; };
+		AC8796502B7C29CE00F68707 /* BitsoChallengeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksDependenciesTest.swift; sourceTree = "<group>"; };
+		AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDependenciesTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +105,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8796B62B7C2B9F00F68707 /* BitsoChallengeData.framework in Frameworks */,
+				AC8796B22B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Frameworks */,
+				AC8796EB2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +135,7 @@
 				AC87959F2B758A2E00F68707 /* BitsoChallengeTests */,
 				AC8795A92B758A2E00F68707 /* BitsoChallengeUITests */,
 				AC87958B2B758A2C00F68707 /* Products */,
+				AC87964F2B7C29CE00F68707 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,8 +155,6 @@
 				AC8795932B758A2E00F68707 /* Assets.xcassets */,
 				AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */,
 				AC8796142B7BFBCE00F68707 /* Core */,
-				AC8795CC2B75A0D100F68707 /* Data */,
-				AC8795C82B75A03A00F68707 /* Domain */,
 				AC8795CD2B75A0DA00F68707 /* Features */,
 				AC8795952B758A2E00F68707 /* Preview Content */,
 			);
@@ -177,6 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				AC8795962B758A2E00F68707 /* Preview Assets.xcassets */,
+				AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */,
+				AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -211,35 +201,6 @@
 			path = Artworks;
 			sourceTree = "<group>";
 		};
-		AC8795C82B75A03A00F68707 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				AC8795FC2B7AA30700F68707 /* UseCases */,
-				AC8795C92B75A04200F68707 /* Entities */,
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
-		AC8795C92B75A04200F68707 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				AC8795FA2B7AA04F00F68707 /* Artist.swift */,
-				AC8795CA2B75A05800F68707 /* Artwork.swift */,
-				AC8796002B7AC9A700F68707 /* ArtworksList.swift */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		AC8795CC2B75A0D100F68707 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				AC8796172B7C06B900F68707 /* Local */,
-				AC8795D52B75AE9D00F68707 /* Remote */,
-				AC8795CF2B75ABB300F68707 /* DataSources */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
 		AC8795CD2B75A0DA00F68707 /* Features */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,51 +208,6 @@
 				AC8795B92B75941F00F68707 /* Artworks */,
 			);
 			path = Features;
-			sourceTree = "<group>";
-		};
-		AC8795CF2B75ABB300F68707 /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				AC8796182B7C07C800F68707 /* ArtworkLocalDataSourceType.swift */,
-				AC8795D12B75AC1F00F68707 /* ArtworkRemoteDataSourceType.swift */,
-			);
-			path = DataSources;
-			sourceTree = "<group>";
-		};
-		AC8795D52B75AE9D00F68707 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-				AC8795F62B7A9C7C00F68707 /* ArtworksApi.swift */,
-				AC8795D62B75AEB900F68707 /* ArtworksEndpoint.swift */,
-				AC8795DB2B75B0B800F68707 /* ArtworksRequestModel.swift */,
-				AC8795F42B7A942E00F68707 /* ArtworksResponseModel.swift */,
-				AC8795F82B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift */,
-				AC8795D82B75AF5700F68707 /* Config */,
-			);
-			path = Remote;
-			sourceTree = "<group>";
-		};
-		AC8795D82B75AF5700F68707 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				AC8795DD2B75B2EE00F68707 /* ApiConstants.swift */,
-				AC8795DF2B75B49500F68707 /* NetworkError.swift */,
-				AC8795E12B75B6B800F68707 /* NetworkingService.swift */,
-				AC8795E32B75B6DF00F68707 /* NetworkTargetType.swift */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-		AC8795FC2B7AA30700F68707 /* UseCases */ = {
-			isa = PBXGroup;
-			children = (
-				AC8796112B7AE0CD00F68707 /* GetArtistUseCaseType.swift */,
-				AC8795FD2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift */,
-				AC8796202B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift */,
-				AC8796272B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift */,
-				AC8796252B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift */,
-			);
-			path = UseCases;
 			sourceTree = "<group>";
 		};
 		AC8796022B7AD75C00F68707 /* Artist */ = {
@@ -315,22 +231,15 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
-		AC8796172B7C06B900F68707 /* Local */ = {
+		AC87964F2B7C29CE00F68707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AC87961A2B7C086700F68707 /* ArtworksLocalApi.swift */,
-				AC87961C2B7C0AAD00F68707 /* ArtworksLocalModel.swift */,
-				AC8796222B7C101E00F68707 /* Config */,
+				AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */,
+				AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */,
+				AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */,
+				AC8796502B7C29CE00F68707 /* BitsoChallengeData.framework */,
 			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		AC8796222B7C101E00F68707 /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				AC8796232B7C103100F68707 /* LocalDataError.swift */,
-			);
-			path = Config;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +252,7 @@
 				AC8795862B758A2C00F68707 /* Sources */,
 				AC8795872B758A2C00F68707 /* Frameworks */,
 				AC8795882B758A2C00F68707 /* Resources */,
+				AC8796B42B7C2B8F00F68707 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -463,41 +373,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8795E22B75B6B800F68707 /* NetworkingService.swift in Sources */,
 				AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */,
 				AC87960A2B7AD7B700F68707 /* ArtistFactory.swift in Sources */,
-				AC87961B2B7C086700F68707 /* ArtworksLocalApi.swift in Sources */,
 				AC87960C2B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift in Sources */,
 				AC8795C32B75943900F68707 /* ArtworksViewModel+Dependencies.swift in Sources */,
-				AC8795F92B7A9F1400F68707 /* ArtworksResponseModel+Mapper.swift in Sources */,
 				AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */,
-				AC8796282B7C190800F68707 /* ClearLocalArtworksUseCaseType.swift in Sources */,
-				AC8795E02B75B49500F68707 /* NetworkError.swift in Sources */,
-				AC8795DE2B75B2EE00F68707 /* ApiConstants.swift in Sources */,
-				AC8796262B7C107900F68707 /* SaveLocalArtworksUseCaseType.swift in Sources */,
-				AC8796012B7AC9A700F68707 /* ArtworksList.swift in Sources */,
+				AC8796F02B7C324B00F68707 /* ArtistDependenciesTest.swift in Sources */,
 				AC8795C22B75943900F68707 /* ArtworksRouter.swift in Sources */,
-				AC87961D2B7C0AAD00F68707 /* ArtworksLocalModel.swift in Sources */,
-				AC8795E42B75B6DF00F68707 /* NetworkTargetType.swift in Sources */,
-				AC8796212B7C0F6000F68707 /* GetLocalArtworksUseCaseType.swift in Sources */,
 				AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */,
 				AC8795C42B75943900F68707 /* ArtworksView.swift in Sources */,
-				AC8796192B7C07C800F68707 /* ArtworkLocalDataSourceType.swift in Sources */,
-				AC8795D72B75AEB900F68707 /* ArtworksEndpoint.swift in Sources */,
-				AC8796242B7C103100F68707 /* LocalDataError.swift in Sources */,
 				AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */,
 				AC87960B2B7AD7B700F68707 /* ArtistRouter.swift in Sources */,
 				AC8795C12B75943900F68707 /* ArtworksFactory.swift in Sources */,
 				AC8795C62B75943900F68707 /* ArtworksEntity.swift in Sources */,
 				AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */,
-				AC8795FB2B7AA04F00F68707 /* Artist.swift in Sources */,
-				AC8796122B7AE0CD00F68707 /* GetArtistUseCaseType.swift in Sources */,
-				AC8795DC2B75B0B800F68707 /* ArtworksRequestModel.swift in Sources */,
-				AC8795CB2B75A05800F68707 /* Artwork.swift in Sources */,
-				AC8795FE2B7AA3AA00F68707 /* GetArtworksUseCaseType.swift in Sources */,
-				AC8795F52B7A942E00F68707 /* ArtworksResponseModel.swift in Sources */,
-				AC8795F72B7A9C7C00F68707 /* ArtworksApi.swift in Sources */,
-				AC8795D22B75AC1F00F68707 /* ArtworkRemoteDataSourceType.swift in Sources */,
+				AC8796EE2B7C31C900F68707 /* ArtworksDependenciesTest.swift in Sources */,
 				AC8795C52B75943900F68707 /* ArtworksViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

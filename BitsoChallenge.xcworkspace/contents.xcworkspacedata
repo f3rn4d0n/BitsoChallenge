@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BitsoChallengeEntities/BitsoChallengeEntities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BitsoChallengeDomain/BitsoChallengeDomain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BitsoChallengeData/BitsoChallengeData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "container:BitsoChallenge/BitsoChallenge.xcodeproj">
+   </FileRef>
+</Workspace>

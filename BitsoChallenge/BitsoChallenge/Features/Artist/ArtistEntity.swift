@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import BitsoChallengeEntities
 
 enum ArtistRouterEntity: Equatable, Hashable {
 }

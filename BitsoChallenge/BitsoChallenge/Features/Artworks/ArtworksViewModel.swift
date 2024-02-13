@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
 
 public final class ArtworksViewModel: ArtworksViewModelType {
     

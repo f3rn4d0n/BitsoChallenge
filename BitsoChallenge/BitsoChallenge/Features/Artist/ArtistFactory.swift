@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
+import BitsoChallengeDomain
+import BitsoChallengeData
 
 struct ArtistFactory {
     

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import BitsoChallengeData
 
 @main
 struct BitsoChallengeApp: App {

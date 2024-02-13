@@ -1,35 +1,28 @@
 //
-//  ArtworksFactory.swift
+//  ArtworksDependenciesTest.swift
 //  BitsoChallenge
 //
-//  Created by Luis Fernando Bustos Ramírez on 08/02/24.
+//  Created by Luis Fernando Bustos Ramírez on 13/02/24.
 //
 
-import SwiftUI
-import BitsoChallengeDomain
+import Foundation
 import BitsoChallengeData
+import BitsoChallengeDomain
 
-struct ArtworksFactory {
+struct ArtworksDependenciesTest {
     
-    static func makeArtworks() -> some View {
-        
+    static func dependencies() -> ArtworksDependencies {
         let localDataSource = ArtworksLocalApi(container: BitsoChallengeApp().sharedModelContainer)
         let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi.shared)
         let getLocalUseCase = GetLocalArtworksUseCase(localDataSource: localDataSource)
         let saveLocalUseCase = SaveLocalArtworksUseCase(localDataSource: localDataSource)
         let clearLocalUseCase = ClearLocalArtworksUseCase(localDataSource: localDataSource)
         
-        let dependencies = ArtworksDependencies(
+        return ArtworksDependencies(
             getRemoteUseCase: getRemoteUseCase,
             getLocalUseCase: getLocalUseCase,
             saveLocalUseCase: saveLocalUseCase,
             clearLocalUseCase: clearLocalUseCase
-        )
-        let viewModel = ArtworksViewModel(dependencies: dependencies)
-        
-        return ArtworksView(
-            router: ArtworksRouter(),
-            viewModel: viewModel
         )
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import BitsoChallengeEntities
 
 enum ArtworksRouterEntity: Equatable, Hashable {
     case detail(artwork: Artwork)
