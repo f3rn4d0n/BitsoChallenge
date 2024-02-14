@@ -40,6 +40,18 @@ enum ArtworksEndpoint: NetworkTargetType {
         return 30.0
     }
     
+    var sampleData: Data? {
+        let bundle = Bundle.init(identifier: "com.lfbr.BitsoChallengeData")
+        let sampleData = NetworkCoreSampleData(bundle: bundle)
+        
+        switch self {
+        case .fetchArtworks:
+            return sampleData.getData(for: "Artworks")
+        case .getArtist:
+            return sampleData.getData(for: "Artist")
+        }
+    }
+    
     func makeURLRequest() throws -> URLRequest {
         guard let baseURL = URL(string: ApiConstants.baseURL + path) else {
             throw NetworkError.invalidURL

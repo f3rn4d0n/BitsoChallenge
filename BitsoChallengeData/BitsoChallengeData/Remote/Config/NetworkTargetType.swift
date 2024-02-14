@@ -7,10 +7,11 @@
 
 import Foundation
 
-protocol NetworkTargetType {
+public protocol NetworkTargetType {
     var path: String { get }
     var method: String { get }
     var queryParams: [URLQueryItem] { get }
+    var sampleData: Data? { get }
     var timeOut: Double { get }
     func makeURLRequest() throws -> URLRequest
 }

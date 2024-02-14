@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC58A66E2B7D5B4600141D3C /* ArtworksLocalDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A66D2B7D5B4600141D3C /* ArtworksLocalDataSourceTest.swift */; };
+		AC58A6702B7D62A000141D3C /* ArtworksRemoteDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A66F2B7D62A000141D3C /* ArtworksRemoteDataSourceTest.swift */; };
+		AC58A6722B7D63D800141D3C /* NetworkCoreSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A6712B7D63D800141D3C /* NetworkCoreSampleData.swift */; };
+		AC58A6742B7D641000141D3C /* Artworks.json in Resources */ = {isa = PBXBuildFile; fileRef = AC58A6732B7D641000141D3C /* Artworks.json */; };
+		AC58A6762B7D643A00141D3C /* Artist.json in Resources */ = {isa = PBXBuildFile; fileRef = AC58A6752B7D643A00141D3C /* Artist.json */; };
 		AC8796392B7C293500F68707 /* BitsoChallengeData.docc in Sources */ = {isa = PBXBuildFile; fileRef = AC8796382B7C293500F68707 /* BitsoChallengeData.docc */; };
 		AC87963F2B7C293500F68707 /* BitsoChallengeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796342B7C293500F68707 /* BitsoChallengeData.framework */; };
-		AC8796442B7C293500F68707 /* BitsoChallengeDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796432B7C293500F68707 /* BitsoChallengeDataTests.swift */; };
 		AC8796452B7C293500F68707 /* BitsoChallengeData.h in Headers */ = {isa = PBXBuildFile; fileRef = AC8796372B7C293500F68707 /* BitsoChallengeData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC8796672B7C2A7100F68707 /* ArtworksApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796592B7C29F000F68707 /* ArtworksApi.swift */; };
 		AC8796682B7C2A7400F68707 /* ArtworksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87965A2B7C29F000F68707 /* ArtworksEndpoint.swift */; };
@@ -54,11 +58,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC58A66D2B7D5B4600141D3C /* ArtworksLocalDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksLocalDataSourceTest.swift; sourceTree = "<group>"; };
+		AC58A66F2B7D62A000141D3C /* ArtworksRemoteDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRemoteDataSourceTest.swift; sourceTree = "<group>"; };
+		AC58A6712B7D63D800141D3C /* NetworkCoreSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCoreSampleData.swift; sourceTree = "<group>"; };
+		AC58A6732B7D641000141D3C /* Artworks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artworks.json; sourceTree = "<group>"; };
+		AC58A6752B7D643A00141D3C /* Artist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Artist.json; sourceTree = "<group>"; };
 		AC8796342B7C293500F68707 /* BitsoChallengeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitsoChallengeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8796372B7C293500F68707 /* BitsoChallengeData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsoChallengeData.h; sourceTree = "<group>"; };
 		AC8796382B7C293500F68707 /* BitsoChallengeData.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BitsoChallengeData.docc; sourceTree = "<group>"; };
 		AC87963E2B7C293500F68707 /* BitsoChallengeDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitsoChallengeDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC8796432B7C293500F68707 /* BitsoChallengeDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoChallengeDataTests.swift; sourceTree = "<group>"; };
 		AC8796542B7C29F000F68707 /* ArtworksLocalApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksLocalApi.swift; sourceTree = "<group>"; };
 		AC8796552B7C29F000F68707 /* ArtworksLocalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksLocalModel.swift; sourceTree = "<group>"; };
 		AC8796562B7C29F000F68707 /* LocalDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataError.swift; sourceTree = "<group>"; };
@@ -130,7 +138,8 @@
 		AC8796422B7C293500F68707 /* BitsoChallengeDataTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC8796432B7C293500F68707 /* BitsoChallengeDataTests.swift */,
+				AC58A66D2B7D5B4600141D3C /* ArtworksLocalDataSourceTest.swift */,
+				AC58A66F2B7D62A000141D3C /* ArtworksRemoteDataSourceTest.swift */,
 			);
 			path = BitsoChallengeDataTests;
 			sourceTree = "<group>";
@@ -160,6 +169,7 @@
 				AC87965F2B7C29F000F68707 /* NetworkError.swift */,
 				AC8796602B7C29F000F68707 /* NetworkingService.swift */,
 				AC8796612B7C29F000F68707 /* NetworkTargetType.swift */,
+				AC58A6712B7D63D800141D3C /* NetworkCoreSampleData.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -167,6 +177,8 @@
 		AC8796632B7C29F000F68707 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				AC58A6752B7D643A00141D3C /* Artist.json */,
+				AC58A6732B7D641000141D3C /* Artworks.json */,
 				AC8796592B7C29F000F68707 /* ArtworksApi.swift */,
 				AC87965A2B7C29F000F68707 /* ArtworksEndpoint.swift */,
 				AC87965B2B7C29F000F68707 /* ArtworksRequestModel.swift */,
@@ -287,6 +299,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC58A6762B7D643A00141D3C /* Artist.json in Resources */,
+				AC58A6742B7D641000141D3C /* Artworks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +323,7 @@
 				AC8796692B7C2A7600F68707 /* ArtworksRequestModel.swift in Sources */,
 				AC87966E2B7C2A8600F68707 /* NetworkingService.swift in Sources */,
 				AC8796392B7C293500F68707 /* BitsoChallengeData.docc in Sources */,
+				AC58A6722B7D63D800141D3C /* NetworkCoreSampleData.swift in Sources */,
 				AC8796712B7C2A9000F68707 /* ArtworkRemoteDataSourceType.swift in Sources */,
 				AC8796742B7C2ABA00F68707 /* ArtworksLocalModel.swift in Sources */,
 				AC87966B2B7C2A7A00F68707 /* ArtworksResponseModel+Mapper.swift in Sources */,
@@ -326,7 +341,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8796442B7C293500F68707 /* BitsoChallengeDataTests.swift in Sources */,
+				AC58A66E2B7D5B4600141D3C /* ArtworksLocalDataSourceTest.swift in Sources */,
+				AC58A6702B7D62A000141D3C /* ArtworksRemoteDataSourceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

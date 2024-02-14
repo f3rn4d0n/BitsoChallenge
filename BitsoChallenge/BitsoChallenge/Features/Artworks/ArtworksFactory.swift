@@ -14,7 +14,7 @@ struct ArtworksFactory {
     static func makeArtworks() -> some View {
         
         let localDataSource = ArtworksLocalApi(container: BitsoChallengeApp().sharedModelContainer)
-        let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi.shared)
+        let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi())
         let saveLocalUseCase = SaveLocalArtworksUseCase(localDataSource: localDataSource)
         let clearLocalUseCase = ClearLocalArtworksUseCase(localDataSource: localDataSource)
         let getAndSaveUseCase = GetAndSaveArtworksUseCase(

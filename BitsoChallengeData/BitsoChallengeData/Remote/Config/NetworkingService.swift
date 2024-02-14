@@ -7,14 +7,14 @@
 
 import Foundation
 
-protocol NetworkServiceType {
+public protocol NetworkServiceType {
     func request<T: Decodable>(target: NetworkTargetType) async throws -> T
 }
 
-struct RequestNetworkProvider: NetworkServiceType {
+public struct RequestNetworkProvider: NetworkServiceType {
     private let urlSession: URLSession
     
-    init(urlSession: URLSession = URLSession.shared) {
+    public init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
     }
     
@@ -28,7 +28,7 @@ struct RequestNetworkProvider: NetworkServiceType {
         }
     }
     
-    func request<T: Decodable>(target: NetworkTargetType) async throws -> T {
+    public func request<T: Decodable>(target: NetworkTargetType) async throws -> T {
         let request = try target.makeURLRequest()
         
         let (data, response) = try await urlSession.data(for: request)
@@ -39,6 +39,25 @@ struct RequestNetworkProvider: NetworkServiceType {
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let decodedData = try decoder.decode(T.self, from: data)
+            return decodedData
+        } catch {
+            throw NetworkError.dataConversionFailure(error: error.localizedDescription)
+        }
+    }
+}
+
+struct MockNetworkProvider: NetworkServiceType {
+    
+    func request<T>(target: NetworkTargetType) async throws -> T where T : Decodable {
+        
+        guard let sampleData = target.sampleData else {
+            throw NetworkError.missingMockData
+        }
+        
+        do{
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let decodedData = try decoder.decode(T.self, from: sampleData)
             return decodedData
         } catch {
             throw NetworkError.dataConversionFailure(error: error.localizedDescription)

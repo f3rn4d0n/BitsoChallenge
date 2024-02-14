@@ -12,10 +12,8 @@ public struct ArtworksApi: ArtworkRemoteDataSourceType {
     
     let service: NetworkServiceType
     
-    public static let shared = ArtworksApi()
-    
-    private init() {
-        service = RequestNetworkProvider()
+    public init(service: NetworkServiceType = RequestNetworkProvider()) {
+        self.service = service
     }
     
     public func getArtworks(page: Int, limit: Int) async throws -> ArtworksList {

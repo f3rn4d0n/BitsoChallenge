@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum LocalDataError: Error {
+enum LocalDataError: Error, Equatable {
     case dataNotFound
 }

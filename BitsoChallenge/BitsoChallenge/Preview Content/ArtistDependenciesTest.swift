@@ -15,7 +15,7 @@ struct ArtistDependenciesTest {
         
         return .init(
             artwork: .init(id: 1, title: "", description: "", date: nil, image: nil, thumbnail: nil, artist: nil, artistId: nil),
-            useCase: GetArtistUseCase(remoteDataSource: ArtworksApi.shared)
+            useCase: GetArtistUseCase(remoteDataSource: ArtworksApi())
         )
     }
 }

@@ -12,4 +12,5 @@ public enum NetworkError: Error {
     case invalidStatus(code: Int)
     case invalidResponse
     case dataConversionFailure(error: String)
+    case missingMockData
 }
