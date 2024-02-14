@@ -15,16 +15,22 @@ struct ArtworksFactory {
         
         let localDataSource = ArtworksLocalApi(container: BitsoChallengeApp().sharedModelContainer)
         let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi.shared)
-        let getLocalUseCase = GetLocalArtworksUseCase(localDataSource: localDataSource)
         let saveLocalUseCase = SaveLocalArtworksUseCase(localDataSource: localDataSource)
         let clearLocalUseCase = ClearLocalArtworksUseCase(localDataSource: localDataSource)
+        let getAndSaveUseCase = GetAndSaveArtworksUseCase(
+            getUseCase: getRemoteUseCase,
+            saveUseCase: saveLocalUseCase
+        )
+        let getLocalUseCase = GetLocalArtworksUseCase(localDataSource: localDataSource)
+        let validateDownloadUseCase = ValidateSmoothDownloadNeededUseCase()
         
         let dependencies = ArtworksDependencies(
-            getRemoteUseCase: getRemoteUseCase,
+            getArtworksUseCase: getAndSaveUseCase,
             getLocalUseCase: getLocalUseCase,
-            saveLocalUseCase: saveLocalUseCase,
-            clearLocalUseCase: clearLocalUseCase
+            clearLocalUseCase: clearLocalUseCase,
+            validateDownloadNeededUseCase: validateDownloadUseCase
         )
+        
         let viewModel = ArtworksViewModel(dependencies: dependencies)
         
         return ArtworksView(

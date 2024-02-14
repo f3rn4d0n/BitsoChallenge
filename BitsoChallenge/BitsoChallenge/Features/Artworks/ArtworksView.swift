@@ -13,28 +13,28 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
     private let router: Router
     @State var path  = NavigationPath()
     @ObservedObject var viewModel: ViewModel
-
+    
     public init(router: Router,
                 viewModel: ViewModel) {
         self.router = router
         self.viewModel = viewModel
     }
- 
+    
     var body: some View {
         NavigationStack(path: $path) {
             List {
                 ForEach(viewModel.artworks) { artwork in
                     artworkView(artwork)
-                    .onAppear {
-                        Task{
-                            await viewModel.download(currentArtwork: artwork)
+                        .onAppear {
+                            Task{
+                                await viewModel.downloadArtworks(current: artwork)
+                            }
                         }
-                    }
                 }
             }
             .refreshable {
                 Task{
-                    await viewModel.download(currentArtwork: nil)
+                    await viewModel.reloadArtworks()
                 }
             }
             .navigationDestination(for: ArtworksRouterEntity.self) { option in
@@ -42,6 +42,16 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
             }
             .navigationTitle("Artworks")
             .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        Task {
+                            await viewModel.clearDataBase()
+                        }
+                    } label: {
+                        Image(systemName: "trash.fill")
+                            .tint(.red)
+                    }
+                }
                 if viewModel.isLoading {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         ProgressView()
@@ -71,7 +81,7 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
         } label: {
             HStack {
                 ArtworkImage(artworkImage: artwork.thumbnail)
-                        .frame(width: 40, height: 40)
+                    .frame(width: 40, height: 40)
                 Text("\(artwork.title)")
                     .font(.callout)
                     .foregroundStyle(.black)

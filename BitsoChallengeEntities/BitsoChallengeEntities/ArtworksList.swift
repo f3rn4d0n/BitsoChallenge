@@ -10,7 +10,7 @@ import Foundation
 public struct ArtworksList: Codable {
     public let currentPage: Int
     public let totalPage: Int
-    public let artworks: [Artwork]
+    public var artworks: [Artwork]
     
     public init(currentPage: Int, totalPage: Int, artworks: [Artwork]) {
         self.currentPage = currentPage

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC58A66A2B7D2E3500141D3C /* GetAndSaveArtworksUseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A6692B7D2E3500141D3C /* GetAndSaveArtworksUseCaseType.swift */; };
+		AC58A66C2B7D39E700141D3C /* ValidateDownloadNeededType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58A66B2B7D39E700141D3C /* ValidateDownloadNeededType.swift */; };
 		AC8796852B7C2B3B00F68707 /* BitsoChallengeDomain.docc in Sources */ = {isa = PBXBuildFile; fileRef = AC8796842B7C2B3B00F68707 /* BitsoChallengeDomain.docc */; };
 		AC87968B2B7C2B3B00F68707 /* BitsoChallengeDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796802B7C2B3B00F68707 /* BitsoChallengeDomain.framework */; };
 		AC8796902B7C2B3B00F68707 /* BitsoChallengeDomainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87968F2B7C2B3B00F68707 /* BitsoChallengeDomainTests.swift */; };
@@ -48,6 +50,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC58A6692B7D2E3500141D3C /* GetAndSaveArtworksUseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAndSaveArtworksUseCaseType.swift; sourceTree = "<group>"; };
+		AC58A66B2B7D39E700141D3C /* ValidateDownloadNeededType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateDownloadNeededType.swift; sourceTree = "<group>"; };
 		AC8796802B7C2B3B00F68707 /* BitsoChallengeDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitsoChallengeDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8796832B7C2B3B00F68707 /* BitsoChallengeDomain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitsoChallengeDomain.h; sourceTree = "<group>"; };
 		AC8796842B7C2B3B00F68707 /* BitsoChallengeDomain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = BitsoChallengeDomain.docc; sourceTree = "<group>"; };
@@ -128,6 +132,8 @@
 				AC8796A02B7C2B6200F68707 /* GetLocalArtworksUseCaseType.swift */,
 				AC8796A12B7C2B6200F68707 /* ClearLocalArtworksUseCaseType.swift */,
 				AC8796A22B7C2B6200F68707 /* SaveLocalArtworksUseCaseType.swift */,
+				AC58A6692B7D2E3500141D3C /* GetAndSaveArtworksUseCaseType.swift */,
+				AC58A66B2B7D39E700141D3C /* ValidateDownloadNeededType.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -255,6 +261,8 @@
 				AC8796852B7C2B3B00F68707 /* BitsoChallengeDomain.docc in Sources */,
 				AC8796A82B7C2B6E00F68707 /* ClearLocalArtworksUseCaseType.swift in Sources */,
 				AC8796A42B7C2B6D00F68707 /* GetArtistUseCaseType.swift in Sources */,
+				AC58A66C2B7D39E700141D3C /* ValidateDownloadNeededType.swift in Sources */,
+				AC58A66A2B7D2E3500141D3C /* GetAndSaveArtworksUseCaseType.swift in Sources */,
 				AC8796A52B7C2B6E00F68707 /* GetLocalArtworksUseCaseType.swift in Sources */,
 				AC8796A62B7C2B6E00F68707 /* SaveLocalArtworksUseCaseType.swift in Sources */,
 			);

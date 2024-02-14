@@ -11,24 +11,26 @@ import BitsoChallengeDomain
 
 struct ArtworksDependencies {
 
-    let getRemoteUseCase: GetArtworksUseCaseType
+    let getArtworksUseCase: GetAndSaveArtworksUseCaseType
     let getLocalUseCase: GetLocalArtworksUseCaseType
-    let saveLocalUseCase: SaveLocalArtworksUseCaseType
     let clearLocalUseCase: ClearLocalArtworksUseCaseType
+    let validateDownloadNeededUseCase: ValidateDownloadNeededType
     
-    init(getRemoteUseCase: GetArtworksUseCaseType, 
+    init(getArtworksUseCase: GetAndSaveArtworksUseCaseType,
          getLocalUseCase: GetLocalArtworksUseCaseType,
-         saveLocalUseCase: SaveLocalArtworksUseCaseType,
-         clearLocalUseCase: ClearLocalArtworksUseCaseType) {
-        self.getRemoteUseCase = getRemoteUseCase
+         clearLocalUseCase: ClearLocalArtworksUseCaseType,
+         validateDownloadNeededUseCase: ValidateDownloadNeededType) {
+        self.getArtworksUseCase = getArtworksUseCase
         self.getLocalUseCase = getLocalUseCase
-        self.saveLocalUseCase = saveLocalUseCase
         self.clearLocalUseCase = clearLocalUseCase
+        self.validateDownloadNeededUseCase = validateDownloadNeededUseCase
     }
 }
 
 protocol ArtworksViewModelType: ObservableObject {
     
-    func download(currentArtwork artwork: Artwork?) async
+    func downloadArtworks(current artwork: Artwork) async
+    func reloadArtworks() async
     func requestLocalArtworks() async
+    func clearDataBase() async
 }
