@@ -7,11 +7,12 @@
 
 import SwiftUI
 import BitsoChallengeEntities
+import PreviewSnapshots
 
 struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: View where Router.Route == ArtworksRouterEntity {
     
     private let router: Router
-    @State var path  = NavigationPath()
+    @State var path = NavigationPath()
     @ObservedObject var viewModel: ViewModel
     
     public init(router: Router,
@@ -90,13 +91,25 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
     }
 }
 
-#Preview {
-    @State var path = NavigationPath()
+struct ArtworksFeatureView_Previews: PreviewProvider {
     
-    return ArtworksView(
-        router: ArtworksRouter(),
-        viewModel: ArtworksViewModel(
-            dependencies: ArtworksDependenciesTest.dependencies()
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<[Artwork]> {
+        PreviewSnapshots(
+            configurations: [
+                .init(name: "Emtpy Artworks List", state: []),
+                .init(name: "Full loads", state: Artwork.getSample())
+            ],
+            configure: { artworks in
+                let dependencies = ArtworksDependenciesTest.dependencies()
+                let viewModel = ArtworksViewModel(dependencies: dependencies)
+                viewModel.artworks = artworks
+                let router = ArtworksRouter()
+                return ArtworksView(router: router, viewModel: viewModel)
+            }
         )
-    )
+    }
 }

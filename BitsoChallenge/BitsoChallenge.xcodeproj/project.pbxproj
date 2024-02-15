@@ -10,9 +10,6 @@
 		AC87958E2B758A2C00F68707 /* BitsoChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */; };
 		AC8795942B758A2E00F68707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8795932B758A2E00F68707 /* Assets.xcassets */; };
 		AC8795972B758A2E00F68707 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC8795962B758A2E00F68707 /* Preview Assets.xcassets */; };
-		AC8795A12B758A2E00F68707 /* BitsoChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795A02B758A2E00F68707 /* BitsoChallengeTests.swift */; };
-		AC8795AB2B758A2E00F68707 /* BitsoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795AA2B758A2E00F68707 /* BitsoChallengeUITests.swift */; };
-		AC8795AD2B758A2E00F68707 /* BitsoChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795AC2B758A2E00F68707 /* BitsoChallengeUITestsLaunchTests.swift */; };
 		AC8795C12B75943900F68707 /* ArtworksFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BA2B75943900F68707 /* ArtworksFactory.swift */; };
 		AC8795C22B75943900F68707 /* ArtworksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BB2B75943900F68707 /* ArtworksRouter.swift */; };
 		AC8795C32B75943900F68707 /* ArtworksViewModel+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8795BC2B75943900F68707 /* ArtworksViewModel+Dependencies.swift */; };
@@ -34,17 +31,16 @@
 		AC8796EC2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC8796EE2B7C31C900F68707 /* ArtworksDependenciesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */; };
 		AC8796F02B7C324B00F68707 /* ArtistDependenciesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */; };
+		ACA44DBB2B7EB4B900C1FE28 /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = ACA44DBA2B7EB4B900C1FE28 /* PreviewSnapshots */; };
+		ACA44DBD2B7EB4B900C1FE28 /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = ACA44DBC2B7EB4B900C1FE28 /* PreviewSnapshotsTesting */; };
+		ACA44DC92B7EC0F000C1FE28 /* ArtworksListViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DC82B7EC0F000C1FE28 /* ArtworksListViewTest.swift */; };
+		ACA44DCC2B7EC4EC00C1FE28 /* Artwork+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCB2B7EC4EC00C1FE28 /* Artwork+Extension.swift */; };
+		ACA44DCE2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCD2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift */; };
+		ACA44DD02B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCF2B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		AC87959D2B758A2E00F68707 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AC8795822B758A2C00F68707 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = AC8795892B758A2C00F68707;
-			remoteInfo = BitsoChallenge;
-		};
-		AC8795A72B758A2E00F68707 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AC8795822B758A2C00F68707 /* Project object */;
 			proxyType = 1;
@@ -75,10 +71,6 @@
 		AC8795932B758A2E00F68707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC8795962B758A2E00F68707 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AC87959C2B758A2E00F68707 /* BitsoChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitsoChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC8795A02B758A2E00F68707 /* BitsoChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoChallengeTests.swift; sourceTree = "<group>"; };
-		AC8795A62B758A2E00F68707 /* BitsoChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitsoChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC8795AA2B758A2E00F68707 /* BitsoChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoChallengeUITests.swift; sourceTree = "<group>"; };
-		AC8795AC2B758A2E00F68707 /* BitsoChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsoChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AC8795BA2B75943900F68707 /* ArtworksFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksFactory.swift; sourceTree = "<group>"; };
 		AC8795BB2B75943900F68707 /* ArtworksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksRouter.swift; sourceTree = "<group>"; };
 		AC8795BC2B75943900F68707 /* ArtworksViewModel+Dependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtworksViewModel+Dependencies.swift"; sourceTree = "<group>"; };
@@ -98,6 +90,10 @@
 		AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksDependenciesTest.swift; sourceTree = "<group>"; };
 		AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDependenciesTest.swift; sourceTree = "<group>"; };
+		ACA44DC82B7EC0F000C1FE28 /* ArtworksListViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArtworksListViewTest.swift; sourceTree = "<group>"; };
+		ACA44DCB2B7EC4EC00C1FE28 /* Artwork+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artwork+Extension.swift"; sourceTree = "<group>"; };
+		ACA44DCD2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewTest.swift; sourceTree = "<group>"; };
+		ACA44DCF2B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistViewEntity+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +102,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8796B62B7C2B9F00F68707 /* BitsoChallengeData.framework in Frameworks */,
+				ACA44DBB2B7EB4B900C1FE28 /* PreviewSnapshots in Frameworks */,
 				AC8796B22B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Frameworks */,
 				AC8796EB2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Frameworks */,
 			);
@@ -115,13 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC8795A32B758A2E00F68707 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				ACA44DBD2B7EB4B900C1FE28 /* PreviewSnapshotsTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,9 +124,9 @@
 			children = (
 				AC87958C2B758A2C00F68707 /* BitsoChallenge */,
 				AC87959F2B758A2E00F68707 /* BitsoChallengeTests */,
-				AC8795A92B758A2E00F68707 /* BitsoChallengeUITests */,
 				AC87958B2B758A2C00F68707 /* Products */,
 				AC87964F2B7C29CE00F68707 /* Frameworks */,
+				ACA44DC72B7EC0D900C1FE28 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,7 +135,6 @@
 			children = (
 				AC87958A2B758A2C00F68707 /* BitsoChallenge.app */,
 				AC87959C2B758A2E00F68707 /* BitsoChallengeTests.xctest */,
-				AC8795A62B758A2E00F68707 /* BitsoChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,6 +157,8 @@
 				AC8795962B758A2E00F68707 /* Preview Assets.xcassets */,
 				AC8796ED2B7C31C900F68707 /* ArtworksDependenciesTest.swift */,
 				AC8796EF2B7C324B00F68707 /* ArtistDependenciesTest.swift */,
+				ACA44DCB2B7EC4EC00C1FE28 /* Artwork+Extension.swift */,
+				ACA44DCF2B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -174,18 +166,10 @@
 		AC87959F2B758A2E00F68707 /* BitsoChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				AC8795A02B758A2E00F68707 /* BitsoChallengeTests.swift */,
+				ACA44DC82B7EC0F000C1FE28 /* ArtworksListViewTest.swift */,
+				ACA44DCD2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift */,
 			);
 			path = BitsoChallengeTests;
-			sourceTree = "<group>";
-		};
-		AC8795A92B758A2E00F68707 /* BitsoChallengeUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AC8795AA2B758A2E00F68707 /* BitsoChallengeUITests.swift */,
-				AC8795AC2B758A2E00F68707 /* BitsoChallengeUITestsLaunchTests.swift */,
-			);
-			path = BitsoChallengeUITests;
 			sourceTree = "<group>";
 		};
 		AC8795B92B75941F00F68707 /* Artworks */ = {
@@ -242,6 +226,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ACA44DC72B7EC0D900C1FE28 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,6 +250,9 @@
 			dependencies = (
 			);
 			name = BitsoChallenge;
+			packageProductDependencies = (
+				ACA44DBA2B7EB4B900C1FE28 /* PreviewSnapshots */,
+			);
 			productName = BitsoChallenge;
 			productReference = AC87958A2B758A2C00F68707 /* BitsoChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -277,27 +271,12 @@
 				AC87959E2B758A2E00F68707 /* PBXTargetDependency */,
 			);
 			name = BitsoChallengeTests;
+			packageProductDependencies = (
+				ACA44DBC2B7EB4B900C1FE28 /* PreviewSnapshotsTesting */,
+			);
 			productName = BitsoChallengeTests;
 			productReference = AC87959C2B758A2E00F68707 /* BitsoChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AC8795A52B758A2E00F68707 /* BitsoChallengeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AC8795B62B758A2E00F68707 /* Build configuration list for PBXNativeTarget "BitsoChallengeUITests" */;
-			buildPhases = (
-				AC8795A22B758A2E00F68707 /* Sources */,
-				AC8795A32B758A2E00F68707 /* Frameworks */,
-				AC8795A42B758A2E00F68707 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AC8795A82B758A2E00F68707 /* PBXTargetDependency */,
-			);
-			name = BitsoChallengeUITests;
-			productName = BitsoChallengeUITests;
-			productReference = AC8795A62B758A2E00F68707 /* BitsoChallengeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -316,10 +295,6 @@
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = AC8795892B758A2C00F68707;
 					};
-					AC8795A52B758A2E00F68707 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = AC8795892B758A2C00F68707;
-					};
 				};
 			};
 			buildConfigurationList = AC8795852B758A2C00F68707 /* Build configuration list for PBXProject "BitsoChallenge" */;
@@ -331,13 +306,15 @@
 				Base,
 			);
 			mainGroup = AC8795812B758A2C00F68707;
+			packageReferences = (
+				ACA44DB92B7EB4B900C1FE28 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
+			);
 			productRefGroup = AC87958B2B758A2C00F68707 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AC8795892B758A2C00F68707 /* BitsoChallenge */,
 				AC87959B2B758A2E00F68707 /* BitsoChallengeTests */,
-				AC8795A52B758A2E00F68707 /* BitsoChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -359,13 +336,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AC8795A42B758A2E00F68707 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -373,9 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACA44DCC2B7EC4EC00C1FE28 /* Artwork+Extension.swift in Sources */,
 				AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */,
 				AC87960A2B7AD7B700F68707 /* ArtistFactory.swift in Sources */,
 				AC87960C2B7AD7B700F68707 /* ArtistViewModel+Dependencies.swift in Sources */,
+				ACA44DD02B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift in Sources */,
 				AC8795C32B75943900F68707 /* ArtworksViewModel+Dependencies.swift in Sources */,
 				AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */,
 				AC8796F02B7C324B00F68707 /* ArtistDependenciesTest.swift in Sources */,
@@ -396,16 +368,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC8795A12B758A2E00F68707 /* BitsoChallengeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AC8795A22B758A2E00F68707 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC8795AD2B758A2E00F68707 /* BitsoChallengeUITestsLaunchTests.swift in Sources */,
-				AC8795AB2B758A2E00F68707 /* BitsoChallengeUITests.swift in Sources */,
+				ACA44DCE2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift in Sources */,
+				ACA44DC92B7EC0F000C1FE28 /* ArtworksListViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,11 +380,6 @@
 			isa = PBXTargetDependency;
 			target = AC8795892B758A2C00F68707 /* BitsoChallenge */;
 			targetProxy = AC87959D2B758A2E00F68707 /* PBXContainerItemProxy */;
-		};
-		AC8795A82B758A2E00F68707 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = AC8795892B758A2C00F68707 /* BitsoChallenge */;
-			targetProxy = AC8795A72B758A2E00F68707 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,6 +519,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -589,6 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -642,42 +603,6 @@
 			};
 			name = Release;
 		};
-		AC8795B72B758A2E00F68707 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T94L48M7HD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lfbr.BitsoChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BitsoChallenge;
-			};
-			name = Debug;
-		};
-		AC8795B82B758A2E00F68707 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T94L48M7HD;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lfbr.BitsoChallengeUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BitsoChallenge;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -708,16 +633,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AC8795B62B758A2E00F68707 /* Build configuration list for PBXNativeTarget "BitsoChallengeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AC8795B72B758A2E00F68707 /* Debug */,
-				AC8795B82B758A2E00F68707 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACA44DB92B7EB4B900C1FE28 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doordash-oss/swiftui-preview-snapshots";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACA44DBA2B7EB4B900C1FE28 /* PreviewSnapshots */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACA44DB92B7EB4B900C1FE28 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshots;
+		};
+		ACA44DBC2B7EB4B900C1FE28 /* PreviewSnapshotsTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACA44DB92B7EB4B900C1FE28 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshotsTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC8795822B758A2C00F68707 /* Project object */;
 }

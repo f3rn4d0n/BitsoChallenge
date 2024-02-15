@@ -7,6 +7,7 @@
 
 import SwiftUI
 import BitsoChallengeEntities
+import PreviewSnapshots
 
 struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View where Router.Route == ArtistRouterEntity {
     
@@ -84,11 +85,35 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     }
 }
 
-#Preview {
-    @State var path = NavigationPath()
-    return ArtistView(
-        router: ArtistRouter(),
-        viewModel: ArtistViewModel(dependencies: ArtistDependenciesTest.dependencies()),
-        path: $path
-    )
+struct ArtistFeatureView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<ArtistViewEntity> {
+        @State var path = NavigationPath()
+        return PreviewSnapshots(
+            configurations: [
+                .init(name: "Emtpy Artist and Artwork", state: ArtistViewEntity.getEmtpySample()),
+                .init(name: "Emtpy Artist", state: ArtistViewEntity.getEmptyArtistSample()),
+                .init(name: "Emtpy Arwork", state: ArtistViewEntity.getEmptyArtworkSample()),
+                .init(name: "Full data", state: ArtistViewEntity.getSample())
+            ],
+            configure: { artist in
+                let viewModel = ArtistViewModel(dependencies: ArtistDependenciesTest.dependencies())
+                viewModel.artistEntity = artist
+                
+                
+                return NavigationStack(path: $path) {
+                    ArtistView(
+                       router: ArtistRouter(),
+                       viewModel: viewModel,
+                       path: $path
+                   )
+                }
+                 
+            }
+        )
+    }
 }

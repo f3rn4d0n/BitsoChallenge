@@ -14,7 +14,7 @@ public struct Artist {
     public let description: String?
     public let altNames: String?
     
-    public init(id: Int, title: String, lifePeriod: String?, description: String?, altNames: String?) {
+    public init(id: Int = 0, title: String = "", lifePeriod: String? = nil, description: String? = nil, altNames: String? = nil) {
         self.id = id
         self.title = title
         self.lifePeriod = lifePeriod
