@@ -46,9 +46,11 @@ public struct RequestNetworkProvider: NetworkServiceType {
     }
 }
 
-struct MockNetworkProvider: NetworkServiceType {
+public struct MockNetworkProvider: NetworkServiceType {
     
-    func request<T>(target: NetworkTargetType) async throws -> T where T : Decodable {
+    public init () { }
+    
+    public func request<T>(target: NetworkTargetType) async throws -> T where T : Decodable {
         
         guard let sampleData = target.sampleData else {
             throw NetworkError.missingMockData

@@ -27,4 +27,15 @@ public struct Artwork: Hashable, Identifiable, Codable {
         self.artist = artist
         self.artistId = artistId
     }
+    
+    public init(id: Int = 0) {
+        self.id = id
+        self.title = "Emtpy"
+        self.description = "Emtpy"
+        self.date = nil
+        self.image = nil
+        self.thumbnail = nil
+        self.artist = nil
+        self.artistId = nil
+    }
 }

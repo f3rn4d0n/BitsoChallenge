@@ -13,7 +13,8 @@ struct ArtworksDependenciesTest {
     
     static func dependencies() -> ArtworksDependencies {
         let localDataSource = ArtworksLocalApi(container: BitsoChallengeApp().sharedModelContainer)
-        let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi())
+        let mockNetworkinService = MockNetworkProvider()
+        let getRemoteUseCase = GetArtworksUseCase(remoteDataSource: ArtworksApi(service: mockNetworkinService))
         let saveLocalUseCase = SaveLocalArtworksUseCase(localDataSource: localDataSource)
         let getAndSaveUseCase = GetAndSaveArtworksUseCase(
             getUseCase: getRemoteUseCase,
