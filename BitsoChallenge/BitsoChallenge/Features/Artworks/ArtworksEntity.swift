@@ -11,3 +11,10 @@ import BitsoChallengeEntities
 enum ArtworksRouterEntity: Equatable, Hashable {
     case detail(artwork: Artwork)
 }
+
+struct ArtworksEntity {
+    
+    var isLoading = false
+    var artworks: [Artwork] = []
+    var error: ErrorDetail?
+}

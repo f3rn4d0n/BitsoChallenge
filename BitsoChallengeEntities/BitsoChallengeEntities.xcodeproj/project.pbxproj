@@ -14,6 +14,7 @@
 		AC8796DF2B7C2D3A00F68707 /* ArtworksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796DC2B7C2D3A00F68707 /* ArtworksList.swift */; };
 		AC8796E02B7C2D3A00F68707 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796DE2B7C2D3A00F68707 /* Artist.swift */; };
 		AC8796E12B7C2D3A00F68707 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796DD2B7C2D3A00F68707 /* Artwork.swift */; };
+		ACC5F2FD2B8D2841008060DC /* ErrorDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F2FC2B8D2841008060DC /* ErrorDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		AC8796DC2B7C2D3A00F68707 /* ArtworksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksList.swift; sourceTree = "<group>"; };
 		AC8796DD2B7C2D3A00F68707 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		AC8796DE2B7C2D3A00F68707 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		ACC5F2FC2B8D2841008060DC /* ErrorDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				AC8796DE2B7C2D3A00F68707 /* Artist.swift */,
 				AC8796DD2B7C2D3A00F68707 /* Artwork.swift */,
 				AC8796DC2B7C2D3A00F68707 /* ArtworksList.swift */,
+				ACC5F2FC2B8D2841008060DC /* ErrorDetail.swift */,
 				AC8796C52B7C2D2300F68707 /* BitsoChallengeEntities.h */,
 				AC8796C62B7C2D2300F68707 /* BitsoChallengeEntities.docc */,
 			);
@@ -203,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC5F2FD2B8D2841008060DC /* ErrorDetail.swift in Sources */,
 				AC8796E02B7C2D3A00F68707 /* Artist.swift in Sources */,
 				AC8796DF2B7C2D3A00F68707 /* ArtworksList.swift in Sources */,
 				AC8796E12B7C2D3A00F68707 /* Artwork.swift in Sources */,

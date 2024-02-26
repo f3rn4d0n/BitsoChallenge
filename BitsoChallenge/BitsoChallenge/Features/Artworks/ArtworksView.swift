@@ -24,7 +24,7 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
     var body: some View {
         NavigationStack(path: $path) {
             List {
-                ForEach(viewModel.artworks) { artwork in
+                ForEach(viewModel.model.artworks) { artwork in
                     artworkView(artwork)
                         .onAppear {
                             Task{
@@ -53,14 +53,14 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                             .tint(.red)
                     }
                 }
-                if viewModel.isLoading {
+                if viewModel.model.isLoading {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         ProgressView()
                     }
                 }
             }
             .overlay {
-                if viewModel.artworks.isEmpty {
+                if viewModel.model.artworks.isEmpty {
                     ContentUnavailableView {
                         Label("No artworks founded", systemImage: "book.fill")
                     } description: {
@@ -106,7 +106,7 @@ struct ArtworksFeatureView_Previews: PreviewProvider {
             configure: { artworks in
                 let dependencies = ArtworksDependenciesTest.dependencies()
                 let viewModel = ArtworksViewModel(dependencies: dependencies)
-                viewModel.artworks = artworks
+                viewModel.model.artworks = artworks
                 let router = ArtworksRouter()
                 return ArtworksView(router: router, viewModel: viewModel)
             }

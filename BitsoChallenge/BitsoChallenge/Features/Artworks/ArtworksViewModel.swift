@@ -13,8 +13,7 @@ public final class ArtworksViewModel: ArtworksViewModelType {
     private let dependencies: ArtworksDependencies
     private var totalPages = 1
     private var currentPage = 0
-    @Published var isLoading = false
-    @Published var artworks: [Artwork] = []
+    @Published var model = ArtworksEntity()
     
     init(dependencies: ArtworksDependencies) {
         self.dependencies = dependencies
@@ -23,18 +22,18 @@ public final class ArtworksViewModel: ArtworksViewModelType {
     func downloadArtworks(current artwork: BitsoChallengeEntities.Artwork) async {
         let downloadNeeded = dependencies.validateDownloadNeededUseCase.execute(
             artwork: artwork,
-            in: artworks,
-            isLoading: isLoading,
+            in: model.artworks,
+            isLoading: model.isLoading,
             currentPage: currentPage,
             totalPages: totalPages
         )
         if downloadNeeded {
-            await downloadArtworks(currentPage: currentPage, currentArtworks: artworks)
+            await downloadArtworks(currentPage: currentPage, currentArtworks: model.artworks)
         }
     }
     
     func reloadArtworks() async {
-        if !isLoading {
+        if !model.isLoading {
             await downloadArtworks(currentPage: 0, currentArtworks: [])
         }
     }
@@ -73,13 +72,13 @@ public final class ArtworksViewModel: ArtworksViewModelType {
         DispatchQueue.main.async { [weak self] in
             self?.currentPage = artworkList.currentPage
             self?.totalPages = artworkList.totalPage
-            self?.artworks = artworkList.artworks
+            self?.model.artworks = artworkList.artworks
         }
     }
     
     private func changeLoading(state: Bool) {
         DispatchQueue.main.async { [weak self] in
-            self?.isLoading = state
+            self?.model.isLoading = state
         }
     }
 }
