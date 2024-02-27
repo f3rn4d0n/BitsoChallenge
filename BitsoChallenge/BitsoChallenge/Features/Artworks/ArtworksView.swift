@@ -67,13 +67,11 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
             }
             .overlay {
                 if viewModel.model.artworks.isEmpty {
-                    ContentUnavailableView {
-                        Label("No artworks founded", systemImage: "book.fill")
-                            .font(Typography.boldX.font)
-                    } description: {
-                        Text("Pull to refresh")
-                            .font(Typography.regularM.font)
-                    }
+                    DSContentUnavailableView(
+                        title: "No artworks founded",
+                        systemImage: "book.fill",
+                        description: "Pull to refresh"
+                    )
                     .onAppear {
                         Task{
                             await viewModel.requestLocalArtworks()
