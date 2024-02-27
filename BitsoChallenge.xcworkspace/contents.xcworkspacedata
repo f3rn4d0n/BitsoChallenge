@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:iOSChallengeDesignSystem/iOSChallengeDesignSystem.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:BitsoChallengeEntities/BitsoChallengeEntities.xcodeproj">
    </FileRef>
    <FileRef
