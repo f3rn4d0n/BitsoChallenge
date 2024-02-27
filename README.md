@@ -47,6 +47,11 @@ Important: For developer use only, a trash button has been added to delete all s
 
 ![Unit testing](Docs/Images/Architecture.png)
 
+## Design system
+
+A design system was created for the unification of all the UI elements.
+- Custom fonts were downloaded from [www.fontspace.com](https://www.fontspace.com/sans-andreas-font-f90635)
+
 ## Testing
 - Each framework has its own unit testing, so any framework must to be tested individually
 - For snapshot testing we use swiftui-preview-snapshots dependency, and each screenshot was saved under `BitsoChallenge/BitsoChallengeTests/__Snapshots__/<ViewTest>`, if you delete any of them, the test will fail but a new screenshot will be taken
