@@ -9,12 +9,12 @@ import SwiftUI
 
 public struct DSArtistDetailView: View {
     
-    var title: String
+    var title: String?
     var period: String?
     var pseudonymous: String?
     var description: String?
     
-    public init(title: String, period: String? = nil, pseudonymous: String? = nil, description: String? = nil) {
+    public init(title: String? = nil, period: String? = nil, pseudonymous: String? = nil, description: String? = nil) {
         self.title = title
         self.period = period
         self.pseudonymous = pseudonymous
@@ -25,8 +25,8 @@ public struct DSArtistDetailView: View {
         VStack {
             Divider()
                 .background(DSColor.primary)
-            if let period = period {
-                Text("\(title): \(period)")
+            if let author = title, let period = period {
+                Text("\(author): \(period)")
                     .font(Typography.boldM.font)
                     .foregroundStyle(DSColor.primary)
             }

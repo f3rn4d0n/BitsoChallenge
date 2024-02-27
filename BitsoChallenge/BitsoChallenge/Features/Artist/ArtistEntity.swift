@@ -16,18 +16,19 @@ struct ArtistViewEntity {
     var artworkImage: String?
     var artworkDate: String?
     var artworkDetail: String
-    var artistTitle: String?
+    var artworkAuthor: String?
     var artistBorn: String?
     var artistAltNames: String?
     var artistDetail: String?
+    var isLoading = false
     
     init(artwork: Artwork) {
         self.artworkTitle = artwork.title
         self.artworkImage = artwork.image
         self.artworkDate = artwork.date
-        self.artistTitle = artwork.artist
-        self.artistBorn = nil
         self.artworkDetail = artwork.description
+        self.artworkAuthor = artwork.artist
+        self.artistBorn = nil
         self.artistAltNames = nil
         self.artistDetail = nil
     }
@@ -36,10 +37,14 @@ struct ArtistViewEntity {
         self.artworkTitle = artwork.title
         self.artworkImage = artwork.image
         self.artworkDate = artwork.date
-        self.artistTitle = artist.title
-        self.artistBorn = artist.lifePeriod
         self.artworkDetail = artwork.description
+        self.artworkAuthor = artwork.artist
+        self.artistBorn = artist.lifePeriod
         self.artistAltNames = artist.altNames
         self.artistDetail = artist.description
+    }
+    
+    var artworkDetailNotEmpty: Bool {
+        return artistDetail != nil || artistAltNames != nil || artistBorn != nil
     }
 }

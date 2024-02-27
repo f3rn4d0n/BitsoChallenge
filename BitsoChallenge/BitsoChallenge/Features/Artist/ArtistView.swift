@@ -31,16 +31,24 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
             DSArtworkDetailView(
                 image: viewModel.artistEntity.artworkImage,
                 date:viewModel.artistEntity.artworkDate,
-                author: viewModel.artistEntity.artistTitle,
+                author: viewModel.artistEntity.artworkAuthor,
                 detail: viewModel.artistEntity.artworkDetail
             )
-            if let artistTile = viewModel.artistEntity.artistTitle {
-                DSArtistDetailView(
-                    title: artistTile,
-                    period: viewModel.artistEntity.artistBorn,
-                    pseudonymous: viewModel.artistEntity.artistAltNames,
-                    description: viewModel.artistEntity.artistDetail
-                )
+            if viewModel.artistEntity.isLoading {
+                ProgressView()
+            } else {
+                if viewModel.artistEntity.artworkDetailNotEmpty {
+                    DSArtistDetailView(
+                        title: viewModel.artistEntity.artworkAuthor,
+                        period: viewModel.artistEntity.artistBorn,
+                        pseudonymous: viewModel.artistEntity.artistAltNames,
+                        description: viewModel.artistEntity.artistDetail
+                    )
+                } else {
+                    Text("Unknown author detail")
+                        .font(Typography.boldM.font)
+                        .foregroundStyle(DSColor.primary)
+                }
             }
             Spacer()
         }

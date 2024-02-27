@@ -19,17 +19,21 @@ final class ArtistViewModel: ArtistViewModelType {
 
     func getInfo() async -> Void {
         if let artistId = dependencies.artwork.artistId {
+            DispatchQueue.main.async { [weak self] in
+                self?.artistEntity.isLoading = true
+            }
             let artistResponse = await dependencies.useCase.execute(artistId: artistId)
-            switch artistResponse {
-            case .success(let artist):
-                DispatchQueue.main.async { [weak self] in
-                    guard let self = self else {
-                        return
-                    }
-                    self.artistEntity = .init(artwork: self.dependencies.artwork, artist: artist)
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else {
+                    return
                 }
-            case .failure(let failure):
-                print("Error: \(failure.localizedDescription)")
+                self.artistEntity.isLoading = true
+                switch artistResponse {
+                case .success(let artist):
+                    self.artistEntity = .init(artwork: self.dependencies.artwork, artist: artist)
+                case .failure(let failure):
+                    print("Error: \(failure.localizedDescription)")
+                }
             }
         }
     }
