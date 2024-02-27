@@ -29,6 +29,7 @@
 		ACC5F3662B8E64A8008060DC /* DSContentUnavailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3652B8E64A8008060DC /* DSContentUnavailableView.swift */; };
 		ACC5F3682B8E6F61008060DC /* DSArtworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3672B8E6F61008060DC /* DSArtworkDetailView.swift */; };
 		ACC5F36A2B8E6F8E008060DC /* DSArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3692B8E6F8E008060DC /* DSArtistDetailView.swift */; };
+		ACC5F36C2B8E8595008060DC /* DSErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		ACC5F3652B8E64A8008060DC /* DSContentUnavailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSContentUnavailableView.swift; sourceTree = "<group>"; };
 		ACC5F3672B8E6F61008060DC /* DSArtworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtworkDetailView.swift; sourceTree = "<group>"; };
 		ACC5F3692B8E6F8E008060DC /* DSArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtistDetailView.swift; sourceTree = "<group>"; };
+		ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSErrorAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +169,7 @@
 				ACC5F3652B8E64A8008060DC /* DSContentUnavailableView.swift */,
 				ACC5F3672B8E6F61008060DC /* DSArtworkDetailView.swift */,
 				ACC5F3692B8E6F8E008060DC /* DSArtistDetailView.swift */,
+				ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				ACC5F3312B8D4514008060DC /* Typography.swift in Sources */,
 				ACC5F3642B8E5135008060DC /* ForEach+Extension.swift in Sources */,
 				ACC5F3442B8D4C1C008060DC /* DSButton.swift in Sources */,
+				ACC5F36C2B8E8595008060DC /* DSErrorAlert.swift in Sources */,
 				ACC5F3662B8E64A8008060DC /* DSContentUnavailableView.swift in Sources */,
 				ACC5F35C2B8D94A9008060DC /* DSCellView.swift in Sources */,
 				ACC5F36A2B8E6F8E008060DC /* DSArtistDetailView.swift in Sources */,

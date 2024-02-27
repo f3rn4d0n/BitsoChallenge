@@ -68,7 +68,6 @@ public struct DSButton: View {
             .foregroundColor(style.foregroundColor)
             .background(style.backgroundColor)
             .cornerRadius(DSSize.normal.floatValue)
-            .padding()
         })
     }
 }
