@@ -1,5 +1,5 @@
 //
-//  ArtworkImage.swift
+//  DSImage.swift
 //  BitsoChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 13/02/24.
@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct ArtworkImage: View {
+public struct DSImage: View {
     
-    let artworkImage: String?
+    let imageURL: String?
     
-    var body: some View {
-        if let urlString = artworkImage {
+    public init(imageURL: String? = nil) {
+        self.imageURL = imageURL
+    }
+    
+    public var body: some View {
+        if let urlString = imageURL {
             AsyncImage(url: URL(string: urlString), scale: 3) { phase in
                 switch phase {
                 case .empty:
@@ -44,5 +48,7 @@ struct ArtworkImage: View {
 }
 
 #Preview {
-    ArtworkImage(artworkImage: "https://www.artic.edu/iiif/2/4e0fc7a7-9c88-22a8-4a55-a31ed527473d/full/843,/0/default.jpg")
+    DSImage(
+        imageURL: "https://www.artic.edu/iiif/2/4e0fc7a7-9c88-22a8-4a55-a31ed527473d/full/843,/0/default.jpg"
+    )
 }

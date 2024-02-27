@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import BitsoChallengeData
+import iOSChallengeDesignSystem
 
 @main
 struct BitsoChallengeApp: App {
@@ -16,18 +17,39 @@ struct BitsoChallengeApp: App {
             ArtworksLocalModel.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
+    
     var body: some Scene {
-        WindowGroup {
+        doDesign()
+        doNavigationAppearence()
+        return WindowGroup {
             ArtworksFactory.makeArtworks()
         }
         .modelContainer(sharedModelContainer)
+    }
+    
+    func doDesign() {
+        Typography.registerFonts()
+    }
+    
+    func doNavigationAppearence() {
+        let appear = UINavigationBarAppearance()
+        let largeAtters: [NSAttributedString.Key: Any] = [
+            .font: Typography.boldXL.uifont!
+        ]
+        let compacAtters: [NSAttributedString.Key: Any] = [
+            .font: Typography.boldX.uifont!
+        ]
+        appear.largeTitleTextAttributes = largeAtters
+        appear.titleTextAttributes = compacAtters
+        
+        UINavigationBar.appearance().standardAppearance = appear
+        UINavigationBar.appearance().compactAppearance = appear
+        UINavigationBar.appearance().scrollEdgeAppearance = appear
     }
 }

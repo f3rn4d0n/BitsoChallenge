@@ -8,6 +8,7 @@
 import SwiftUI
 import BitsoChallengeEntities
 import PreviewSnapshots
+import iOSChallengeDesignSystem
 
 struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View where Router.Route == ArtistRouterEntity {
     
@@ -27,7 +28,7 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     
     var body: some View {
         VStack {
-            ArtworkImage(artworkImage: viewModel.artistEntity.artworkImage)
+            DSImage(imageURL: viewModel.artistEntity.artworkImage)
                 .frame(width: 250, height: 250)
             subtitleView
             artworkDescriptionView

@@ -7,12 +7,16 @@
 
 import SwiftUI
 
-struct TypographyDescription {
+public struct TypographyDescription {
     
     let type: TypographyType
     let size: DSSize
     
-    var font: Font {
+    public var font: Font {
         return Font.custom(type.rawValue, size: size.floatValue)
+    }
+    
+    public var uifont: UIFont? {
+        return UIFont(name: type.rawValue, size: size.floatValue)
     }
 }

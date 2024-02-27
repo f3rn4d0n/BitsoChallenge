@@ -17,7 +17,7 @@ public struct Artwork: Hashable, Identifiable, Codable {
     public let artist: String?
     public let artistId: Int?
     
-    public init(id: Int = 0, title: String = "Empty", description: String = "Empty", date: String? = nil, image: String? = nil, thumbnail: String? = nil, artist: String? = nil, artistId: Int? = nil) {
+    public init(id: Int = 0, title: String = "", description: String = "", date: String? = nil, image: String? = nil, thumbnail: String? = nil, artist: String? = nil, artistId: Int? = nil) {
         self.id = id
         self.title = title
         self.description = description

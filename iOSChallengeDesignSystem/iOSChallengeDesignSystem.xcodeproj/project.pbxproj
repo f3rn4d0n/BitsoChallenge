@@ -23,6 +23,9 @@
 		ACC5F3422B8D4968008060DC /* TypographyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3412B8D4968008060DC /* TypographyDescription.swift */; };
 		ACC5F3442B8D4C1C008060DC /* DSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3432B8D4C1C008060DC /* DSButton.swift */; };
 		ACC5F3462B8D50C1008060DC /* DSSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3452B8D50C1008060DC /* DSSize.swift */; };
+		ACC5F35C2B8D94A9008060DC /* DSCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F35B2B8D94A9008060DC /* DSCellView.swift */; };
+		ACC5F35E2B8D966B008060DC /* DSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F35D2B8D966B008060DC /* DSImage.swift */; };
+		ACC5F3642B8E5135008060DC /* ForEach+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3632B8E5135008060DC /* ForEach+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		ACC5F3432B8D4C1C008060DC /* DSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButton.swift; sourceTree = "<group>"; };
 		ACC5F3452B8D50C1008060DC /* DSSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSSize.swift; sourceTree = "<group>"; };
 		ACC5F3472B8D8123008060DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ACC5F35B2B8D94A9008060DC /* DSCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCellView.swift; sourceTree = "<group>"; };
+		ACC5F35D2B8D966B008060DC /* DSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImage.swift; sourceTree = "<group>"; };
+		ACC5F3632B8E5135008060DC /* ForEach+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ForEach+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,7 @@
 		ACC5F30A2B8D4223008060DC /* iOSChallengeDesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				ACC5F3622B8E5117008060DC /* Extensions */,
 				ACC5F3472B8D8123008060DC /* Info.plist */,
 				ACC5F32D2B8D4324008060DC /* Fundation */,
 				ACC5F32C2B8D42BE008060DC /* Components */,
@@ -148,7 +155,9 @@
 		ACC5F32C2B8D42BE008060DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				ACC5F35D2B8D966B008060DC /* DSImage.swift */,
 				ACC5F3432B8D4C1C008060DC /* DSButton.swift */,
+				ACC5F35B2B8D94A9008060DC /* DSCellView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -182,6 +191,14 @@
 				ACC5F3342B8D4759008060DC /* Fonts */,
 			);
 			path = Typography;
+			sourceTree = "<group>";
+		};
+		ACC5F3622B8E5117008060DC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ACC5F3632B8E5135008060DC /* ForEach+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,10 +317,13 @@
 			files = (
 				ACC5F3422B8D4968008060DC /* TypographyDescription.swift in Sources */,
 				ACC5F3462B8D50C1008060DC /* DSSize.swift in Sources */,
+				ACC5F35E2B8D966B008060DC /* DSImage.swift in Sources */,
 				ACC5F3402B8D4939008060DC /* TypographyType.swift in Sources */,
 				ACC5F30D2B8D4223008060DC /* iOSChallengeDesignSystem.docc in Sources */,
 				ACC5F3312B8D4514008060DC /* Typography.swift in Sources */,
+				ACC5F3642B8E5135008060DC /* ForEach+Extension.swift in Sources */,
 				ACC5F3442B8D4C1C008060DC /* DSButton.swift in Sources */,
+				ACC5F35C2B8D94A9008060DC /* DSCellView.swift in Sources */,
 				ACC5F32F2B8D4334008060DC /* DSColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -467,6 +487,7 @@
 				INFOPLIST_FILE = iOSChallengeDesignSystem/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,6 +520,7 @@
 				INFOPLIST_FILE = iOSChallengeDesignSystem/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

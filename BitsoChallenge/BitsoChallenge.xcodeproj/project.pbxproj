@@ -22,7 +22,6 @@
 		AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796062B7AD7B700F68707 /* ArtistView.swift */; };
 		AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */; };
 		AC87960F2B7AD7B700F68707 /* ArtistEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796082B7AD7B700F68707 /* ArtistEntity.swift */; };
-		AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8796152B7BFBE000F68707 /* ArtworkImage.swift */; };
 		AC8796B22B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */; };
 		AC8796B32B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC8796B62B7C2B9F00F68707 /* BitsoChallengeData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */; };
@@ -37,6 +36,8 @@
 		ACA44DCC2B7EC4EC00C1FE28 /* Artwork+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCB2B7EC4EC00C1FE28 /* Artwork+Extension.swift */; };
 		ACA44DCE2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCD2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift */; };
 		ACA44DD02B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA44DCF2B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift */; };
+		ACC5F3602B8E3A05008060DC /* iOSChallengeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F35F2B8E3A05008060DC /* iOSChallengeDesignSystem.framework */; };
+		ACC5F3612B8E3A05008060DC /* iOSChallengeDesignSystem.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F35F2B8E3A05008060DC /* iOSChallengeDesignSystem.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 				AC8796B72B7C2B9F00F68707 /* BitsoChallengeData.framework in Embed Frameworks */,
 				AC8796B32B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Embed Frameworks */,
 				AC8796EC2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Embed Frameworks */,
+				ACC5F3612B8E3A05008060DC /* iOSChallengeDesignSystem.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,7 +85,6 @@
 		AC8796062B7AD7B700F68707 /* ArtistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistView.swift; sourceTree = "<group>"; };
 		AC8796072B7AD7B700F68707 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		AC8796082B7AD7B700F68707 /* ArtistEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistEntity.swift; sourceTree = "<group>"; };
-		AC8796152B7BFBE000F68707 /* ArtworkImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkImage.swift; sourceTree = "<group>"; };
 		AC8796502B7C29CE00F68707 /* BitsoChallengeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeDomain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeData.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +95,7 @@
 		ACA44DCB2B7EC4EC00C1FE28 /* Artwork+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Artwork+Extension.swift"; sourceTree = "<group>"; };
 		ACA44DCD2B7ED0B000C1FE28 /* ArtistDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewTest.swift; sourceTree = "<group>"; };
 		ACA44DCF2B7ED2A000C1FE28 /* ArtistViewEntity+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ArtistViewEntity+Extension.swift"; sourceTree = "<group>"; };
+		ACC5F35F2B8E3A05008060DC /* iOSChallengeDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8796B62B7C2B9F00F68707 /* BitsoChallengeData.framework in Frameworks */,
+				ACC5F3602B8E3A05008060DC /* iOSChallengeDesignSystem.framework in Frameworks */,
 				ACA44DBB2B7EB4B900C1FE28 /* PreviewSnapshots in Frameworks */,
 				AC8796B22B7C2B8F00F68707 /* BitsoChallengeDomain.framework in Frameworks */,
 				AC8796EB2B7C2E5E00F68707 /* BitsoChallengeEntities.framework in Frameworks */,
@@ -144,7 +147,6 @@
 			children = (
 				AC8795932B758A2E00F68707 /* Assets.xcassets */,
 				AC87958D2B758A2C00F68707 /* BitsoChallengeApp.swift */,
-				AC8796142B7BFBCE00F68707 /* Core */,
 				AC8795CD2B75A0DA00F68707 /* Features */,
 				AC8795952B758A2E00F68707 /* Preview Content */,
 			);
@@ -207,17 +209,10 @@
 			path = Artist;
 			sourceTree = "<group>";
 		};
-		AC8796142B7BFBCE00F68707 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				AC8796152B7BFBE000F68707 /* ArtworkImage.swift */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
 		AC87964F2B7C29CE00F68707 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ACC5F35F2B8E3A05008060DC /* iOSChallengeDesignSystem.framework */,
 				AC8796EA2B7C2E5E00F68707 /* BitsoChallengeEntities.framework */,
 				AC8796B52B7C2B9F00F68707 /* BitsoChallengeData.framework */,
 				AC8796B12B7C2B8F00F68707 /* BitsoChallengeDomain.framework */,
@@ -352,7 +347,6 @@
 				AC87960E2B7AD7B700F68707 /* ArtistViewModel.swift in Sources */,
 				AC8796F02B7C324B00F68707 /* ArtistDependenciesTest.swift in Sources */,
 				AC8795C22B75943900F68707 /* ArtworksRouter.swift in Sources */,
-				AC8796162B7BFBE000F68707 /* ArtworkImage.swift in Sources */,
 				AC8795C42B75943900F68707 /* ArtworksView.swift in Sources */,
 				AC87960D2B7AD7B700F68707 /* ArtistView.swift in Sources */,
 				AC87960B2B7AD7B700F68707 /* ArtistRouter.swift in Sources */,

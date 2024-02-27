@@ -9,6 +9,7 @@ import Foundation
 
 enum DSSize {
     
+    case gigant
     case biggest
     case bigger
     case big
@@ -19,6 +20,8 @@ enum DSSize {
     
     var floatValue: CGFloat {
         switch self {
+        case .gigant:
+            return 48
         case .biggest:
             return 36
         case .bigger:
@@ -28,7 +31,7 @@ enum DSSize {
         case .normal:
             return 12
         case .small:
-            return 8
+            return 9
         case .smaller:
             return 4
         case .minimum:

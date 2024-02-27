@@ -8,6 +8,7 @@
 import SwiftUI
 import BitsoChallengeEntities
 import PreviewSnapshots
+import iOSChallengeDesignSystem
 
 struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: View where Router.Route == ArtworksRouterEntity {
     
@@ -24,8 +25,14 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
     var body: some View {
         NavigationStack(path: $path) {
             List {
-                ForEach(viewModel.model.artworks) { artwork in
-                    artworkView(artwork)
+                ForEach(data: viewModel.model.artworks) { index, artwork in
+                    DSCellView(
+                        title: artwork.title,
+                        message: artwork.description,
+                        imageURL: artwork.thumbnail,
+                        style: index % 2 == 0 ? .primary : .secondary) {
+                            path.append(ArtworksRouterEntity.detail(artwork: artwork))
+                        }
                         .onAppear {
                             Task{
                                 await viewModel.downloadArtworks(current: artwork)
@@ -43,19 +50,18 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
             }
             .navigationTitle("Artworks")
             .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        Task {
-                            await viewModel.clearDataBase()
-                        }
-                    } label: {
-                        Image(systemName: "trash.fill")
-                            .tint(.red)
+                if viewModel.model.isLoading {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        ProgressView()
                     }
                 }
-                if viewModel.model.isLoading {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        ProgressView()
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    if !viewModel.model.artworks.isEmpty {
+                        DSButton(style: .tertiary, icon: Image(systemName: "trash.fill"), message: "Clear") {
+                            Task {
+                                await viewModel.clearDataBase()
+                            }
+                        }
                     }
                 }
             }
@@ -63,8 +69,10 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                 if viewModel.model.artworks.isEmpty {
                     ContentUnavailableView {
                         Label("No artworks founded", systemImage: "book.fill")
+                            .font(Typography.boldX.font)
                     } description: {
                         Text("Pull to refresh")
+                            .font(Typography.regularM.font)
                     }
                     .onAppear {
                         Task{
@@ -72,20 +80,6 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                         }
                     }
                 }
-            }
-        }
-    }
-    
-    func artworkView(_ artwork: Artwork) -> some View {
-        Button {
-            path.append(ArtworksRouterEntity.detail(artwork: artwork))
-        } label: {
-            HStack {
-                ArtworkImage(artworkImage: artwork.thumbnail)
-                    .frame(width: 40, height: 40)
-                Text("\(artwork.title)")
-                    .font(.callout)
-                    .foregroundStyle(.black)
             }
         }
     }

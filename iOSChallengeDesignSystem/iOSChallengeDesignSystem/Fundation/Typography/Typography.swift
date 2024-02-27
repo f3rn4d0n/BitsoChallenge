@@ -11,47 +11,62 @@ public struct Typography {
     
     // MARK: - Regular
     
-    public static var regularX: Font {
-        return TypographyDescription(type: .regular, size: .bigger).font
+    public static var regularXL: TypographyDescription {
+        return TypographyDescription(type: .regular, size: .biggest)
     }
     
-    public static var regularM: Font {
-        return TypographyDescription(type: .regular, size: .big).font
+    public static var regularX: TypographyDescription {
+        return TypographyDescription(type: .regular, size: .big)
     }
     
-    public static var regularS: Font {
-        return TypographyDescription(type: .regular, size: .normal).font
+    public static var regularM: TypographyDescription {
+        return TypographyDescription(type: .regular, size: .normal)
+    }
+    
+    public static var regularS: TypographyDescription {
+        return TypographyDescription(type: .regular, size: .small)
     }
     
     // MARK: - Bold
     
-    public static var boldX: Font {
-        return TypographyDescription(type: .bold, size: .big).font
+    public static var boldXL: TypographyDescription {
+        return TypographyDescription(type: .bold, size: .biggest)
     }
     
-    public static var boldM: Font {
-        return TypographyDescription(type: .bold, size: .normal).font
+    public static var boldX: TypographyDescription {
+        return TypographyDescription(type: .bold, size: .big)
     }
     
-    public static var boldS: Font {
-        return TypographyDescription(type: .bold, size: .small).font
+    public static var boldM: TypographyDescription {
+        return TypographyDescription(type: .bold, size: .normal)
+    }
+    
+    public static var boldS: TypographyDescription {
+        return TypographyDescription(type: .bold, size: .small)
     }
     
     // MARK: - Italic
     
-    public static var italicX: Font {
-        return TypographyDescription(type: .italic, size: .big).font
+    public static var italicXL: TypographyDescription {
+        return TypographyDescription(type: .italic, size: .biggest)
     }
     
-    public static var italicM: Font {
-        return TypographyDescription(type: .italic, size: .normal).font
+    public static var italicX: TypographyDescription {
+        return TypographyDescription(type: .italic, size: .big)
     }
     
-    public static var italicS: Font {
-        return TypographyDescription(type: .italic, size: .small).font
+    public static var italicM: TypographyDescription {
+        return TypographyDescription(type: .italic, size: .normal)
     }
     
-    static func registerFonts() {
+    public static var italicS: TypographyDescription {
+        return TypographyDescription(type: .italic, size: .small)
+    }
+}
+
+extension Typography {
+    
+    public static func registerFonts() {
         let fonts = Bundle(for: DSColor.self).urls(forResourcesWithExtension: "ttf", subdirectory: nil)
         fonts?.forEach({ url in
             CTFontManagerRegisterFontsForURL(url as CFURL, .process, nil)
