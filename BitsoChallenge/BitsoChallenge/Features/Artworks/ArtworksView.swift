@@ -90,7 +90,9 @@ struct ArtworksFeatureView_Previews: PreviewProvider {
     }
     
     static var snapshots: PreviewSnapshots<[Artwork]> {
-        PreviewSnapshots(
+        BitsoChallengeApp().doDesign()
+        BitsoChallengeApp().doNavigationAppearence()
+        return PreviewSnapshots(
             configurations: [
                 .init(name: "Emtpy Artworks List", state: []),
                 .init(name: "Full loads", state: Artwork.getSample())

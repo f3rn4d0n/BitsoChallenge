@@ -65,9 +65,7 @@ public struct DSCellView: View {
                 VStack {
                     if let image = imageURL {
                         DSImage(imageURL: image)
-                            .frame(
-                                height: DSSize.gigant.floatValue
-                            )
+                            .frame(height: DSSize.gigant.floatValue)
                     }
                     Text(callToAction ?? "See detail")
                         .font(Typography.italicS.font)

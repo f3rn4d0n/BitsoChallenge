@@ -19,6 +19,7 @@ struct ArtistViewEntity {
     var artistTitle: String?
     var artistBorn: String?
     var artistAltNames: String?
+    var artistDetail: String?
     
     init(artwork: Artwork) {
         self.artworkTitle = artwork.title
@@ -28,6 +29,7 @@ struct ArtistViewEntity {
         self.artistBorn = nil
         self.artworkDetail = artwork.description
         self.artistAltNames = nil
+        self.artistDetail = nil
     }
     
     init(artwork: Artwork, artist: Artist) {
@@ -38,5 +40,6 @@ struct ArtistViewEntity {
         self.artistBorn = artist.lifePeriod
         self.artworkDetail = artwork.description
         self.artistAltNames = artist.altNames
+        self.artistDetail = artist.description
     }
 }

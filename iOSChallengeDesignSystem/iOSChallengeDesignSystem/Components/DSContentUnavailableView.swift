@@ -31,7 +31,8 @@ public struct DSContentUnavailableView: View {
 }
 
 #Preview {
-    DSContentUnavailableView(
+    Typography.registerFonts()
+    return DSContentUnavailableView(
         title: "No artworks founded",
         systemImage: "book.fill",
         description: "Pull to refresh"

@@ -9,6 +9,7 @@ import Foundation
 
 enum DSSize {
     
+    case full
     case gigant
     case biggest
     case bigger
@@ -20,6 +21,8 @@ enum DSSize {
     
     var floatValue: CGFloat {
         switch self {
+        case .full:
+            return 250
         case .gigant:
             return 48
         case .biggest:

@@ -28,11 +28,20 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     
     var body: some View {
         VStack {
-            DSImage(imageURL: viewModel.artistEntity.artworkImage)
-                .frame(width: 250, height: 250)
-            subtitleView
-            artworkDescriptionView
-            artistView
+            DSArtworkDetailView(
+                image: viewModel.artistEntity.artworkImage,
+                date:viewModel.artistEntity.artworkDate,
+                author: viewModel.artistEntity.artistTitle,
+                detail: viewModel.artistEntity.artworkDetail
+            )
+            if let artistTile = viewModel.artistEntity.artistTitle {
+                DSArtistDetailView(
+                    title: artistTile,
+                    period: viewModel.artistEntity.artistBorn,
+                    pseudonymous: viewModel.artistEntity.artistAltNames,
+                    description: viewModel.artistEntity.artistDetail
+                )
+            }
             Spacer()
         }
         .onAppear{
@@ -42,47 +51,6 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
         }
         .navigationTitle(viewModel.artistEntity.artworkTitle)
         .navigationBarTitleDisplayMode(.inline)
-    }
-    
-    @ViewBuilder
-    var subtitleView: some View {
-        if let date = viewModel.artistEntity.artworkDate {
-            Text("At: \(date)")
-                .font(.footnote)
-        } else {
-            Text("At: Unknow date")
-                .font(.footnote)
-        }
-        if let artistTile = viewModel.artistEntity.artistTitle {
-            Text("By: \(artistTile)")
-                .font(.headline)
-                .padding(.top, 10)
-        }
-    }
-    
-    @ViewBuilder
-    var artworkDescriptionView: some View {
-        Text(viewModel.artistEntity.artworkDetail)
-            .font(.body)
-            .padding()
-    }
-    
-    @ViewBuilder
-    var artistView: some View {
-        if let artistTile = viewModel.artistEntity.artistTitle {
-            Divider()
-            if let birth = viewModel.artistEntity.artistBorn {
-                Text("\(artistTile): \(birth)")
-                    .font(.callout)
-            }
-            if let altNames = viewModel.artistEntity.artistAltNames {
-                Text("Other artist names:")
-                    .font(.caption)
-                    .padding()
-                Text(altNames)
-                    .font(.caption)
-            }
-        }
     }
 }
 
@@ -94,6 +62,8 @@ struct ArtistFeatureView_Previews: PreviewProvider {
     
     static var snapshots: PreviewSnapshots<ArtistViewEntity> {
         @State var path = NavigationPath()
+        BitsoChallengeApp().doDesign()
+        BitsoChallengeApp().doNavigationAppearence()
         return PreviewSnapshots(
             configurations: [
                 .init(name: "Emtpy Artist and Artwork", state: ArtistViewEntity.getEmtpySample()),
@@ -105,15 +75,13 @@ struct ArtistFeatureView_Previews: PreviewProvider {
                 let viewModel = ArtistViewModel(dependencies: ArtistDependenciesTest.dependencies())
                 viewModel.artistEntity = artist
                 
-                
                 return NavigationStack(path: $path) {
                     ArtistView(
-                       router: ArtistRouter(),
-                       viewModel: viewModel,
-                       path: $path
-                   )
+                        router: ArtistRouter(),
+                        viewModel: viewModel,
+                        path: $path
+                    )
                 }
-                 
             }
         )
     }
