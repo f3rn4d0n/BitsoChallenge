@@ -27,34 +27,39 @@ struct ArtistView<ViewModel: ArtistViewModel, Router: ArtistRouterType>: View wh
     }
     
     var body: some View {
-        VStack {
-            DSArtworkDetailView(
-                image: viewModel.artistEntity.artworkImage,
-                date:viewModel.artistEntity.artworkDate,
-                author: viewModel.artistEntity.artworkAuthor,
-                detail: viewModel.artistEntity.artworkDetail
-            )
-            if viewModel.artistEntity.isLoading {
-                ProgressView()
-            } else {
-                if viewModel.artistEntity.artworkDetailNotEmpty {
-                    DSArtistDetailView(
-                        title: viewModel.artistEntity.artworkAuthor,
-                        period: viewModel.artistEntity.artistBorn,
-                        pseudonymous: viewModel.artistEntity.artistAltNames,
-                        description: viewModel.artistEntity.artistDetail
-                    )
+        ZStack {
+            VStack {
+                DSArtworkDetailView(
+                    image: viewModel.artistEntity.artworkImage,
+                    date:viewModel.artistEntity.artworkDate,
+                    author: viewModel.artistEntity.artworkAuthor,
+                    detail: viewModel.artistEntity.artworkDetail
+                )
+                if viewModel.artistEntity.isLoading {
+                    ProgressView()
                 } else {
-                    Text("Unknown author detail")
-                        .font(Typography.boldM.font)
-                        .foregroundStyle(DSColor.primary)
+                    if viewModel.artistEntity.artworkDetailNotEmpty {
+                        DSArtistDetailView(
+                            title: viewModel.artistEntity.artworkAuthor,
+                            period: viewModel.artistEntity.artistBorn,
+                            pseudonymous: viewModel.artistEntity.artistAltNames,
+                            description: viewModel.artistEntity.artistDetail
+                        )
+                    } else {
+                        Text("Unknown author detail")
+                            .font(Typography.boldM.font)
+                            .foregroundStyle(DSColor.primary)
+                    }
+                }
+                Spacer()
+            }
+            .onAppear{
+                Task{
+                    await viewModel.getInfo()
                 }
             }
-            Spacer()
-        }
-        .onAppear{
-            Task{
-                await viewModel.getInfo()
+            if let error = viewModel.artistEntity.error {
+                DSErrorAlert(error: error)
             }
         }
         .navigationTitle(viewModel.artistEntity.artworkTitle)

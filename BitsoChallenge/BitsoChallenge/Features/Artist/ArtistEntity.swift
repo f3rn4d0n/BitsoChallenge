@@ -21,6 +21,7 @@ struct ArtistViewEntity {
     var artistAltNames: String?
     var artistDetail: String?
     var isLoading = false
+    var error: ErrorDetail? = nil
     
     init(artwork: Artwork) {
         self.artworkTitle = artwork.title
