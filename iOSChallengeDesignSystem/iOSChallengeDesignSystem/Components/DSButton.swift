@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public enum DSButtonStyle {
     case mainly
@@ -74,14 +75,31 @@ public struct DSButton: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSButton(
-        style: .mainly,
-        icon: Image(systemName: "pencil"),
-        message: "Click to excecute",
-        action: {
-            print("Clicked")
-        }
-    )
+struct DSButton_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<DSButtonStyle> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: [
+                .init(name: "Mainly", state: .mainly),
+                .init(name: "Secondary", state: .secondary),
+                .init(name: "Tertiary", state: .tertiary),
+            ],
+            configure: { style in
+                return ZStack{
+                    DSColor.contrast
+                        .edgesIgnoringSafeArea(.all)
+                    DSButton(
+                        style: style,
+                        icon: Image(systemName: "pencil"),
+                        message: "Click to excecute"
+                    ).padding()
+                }
+            }
+        )
+    }
 }

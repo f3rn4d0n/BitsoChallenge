@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		ACC5F30D2B8D4223008060DC /* iOSChallengeDesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F30C2B8D4223008060DC /* iOSChallengeDesignSystem.docc */; };
 		ACC5F3132B8D4223008060DC /* iOSChallengeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3082B8D4223008060DC /* iOSChallengeDesignSystem.framework */; };
-		ACC5F3182B8D4223008060DC /* iOSChallengeDesignSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3172B8D4223008060DC /* iOSChallengeDesignSystemTests.swift */; };
 		ACC5F3192B8D4223008060DC /* iOSChallengeDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC5F30B2B8D4223008060DC /* iOSChallengeDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACC5F3282B8D427B008060DC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC5F3272B8D427B008060DC /* Colors.xcassets */; };
 		ACC5F32F2B8D4334008060DC /* DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F32E2B8D4334008060DC /* DSColor.swift */; };
@@ -30,6 +29,10 @@
 		ACC5F36C2B8E8595008060DC /* DSErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */; };
 		ACC5F3732B8FB835008060DC /* iOSChallengeEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */; };
 		ACC5F3742B8FB835008060DC /* iOSChallengeEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ACE034172B8FCA40000BB92B /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = ACE034162B8FCA40000BB92B /* PreviewSnapshots */; };
+		ACE034192B8FCA40000BB92B /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = ACE034182B8FCA40000BB92B /* PreviewSnapshotsTesting */; };
+		ACE0341B2B8FCAA1000BB92B /* DSButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */; };
+		ACE0341E2B8FD4BC000BB92B /* Snapshotting+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0341D2B8FD4BB000BB92B /* Snapshotting+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,7 +64,6 @@
 		ACC5F30B2B8D4223008060DC /* iOSChallengeDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSChallengeDesignSystem.h; sourceTree = "<group>"; };
 		ACC5F30C2B8D4223008060DC /* iOSChallengeDesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOSChallengeDesignSystem.docc; sourceTree = "<group>"; };
 		ACC5F3122B8D4223008060DC /* iOSChallengeDesignSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSChallengeDesignSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACC5F3172B8D4223008060DC /* iOSChallengeDesignSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChallengeDesignSystemTests.swift; sourceTree = "<group>"; };
 		ACC5F3272B8D427B008060DC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ACC5F32E2B8D4334008060DC /* DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSColor.swift; sourceTree = "<group>"; };
 		ACC5F3302B8D4514008060DC /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 		ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSErrorAlert.swift; sourceTree = "<group>"; };
 		ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5F38A2B8FBF4D008060DC /* iOSChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButtonTest.swift; sourceTree = "<group>"; };
+		ACE0341D2B8FD4BB000BB92B /* Snapshotting+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Snapshotting+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACC5F3732B8FB835008060DC /* iOSChallengeEntities.framework in Frameworks */,
+				ACE034172B8FCA40000BB92B /* PreviewSnapshots in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE034192B8FCA40000BB92B /* PreviewSnapshotsTesting in Frameworks */,
 				ACC5F3132B8D4223008060DC /* iOSChallengeDesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +146,8 @@
 		ACC5F3162B8D4223008060DC /* iOSChallengeDesignSystemTests */ = {
 			isa = PBXGroup;
 			children = (
-				ACC5F3172B8D4223008060DC /* iOSChallengeDesignSystemTests.swift */,
+				ACE0341C2B8FD497000BB92B /* Configuration */,
+				ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */,
 			);
 			path = iOSChallengeDesignSystemTests;
 			sourceTree = "<group>";
@@ -215,6 +222,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		ACE0341C2B8FD497000BB92B /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				ACE0341D2B8FD4BB000BB92B /* Snapshotting+Extension.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -244,6 +259,9 @@
 			dependencies = (
 			);
 			name = iOSChallengeDesignSystem;
+			packageProductDependencies = (
+				ACE034162B8FCA40000BB92B /* PreviewSnapshots */,
+			);
 			productName = iOSChallengeDesignSystem;
 			productReference = ACC5F3082B8D4223008060DC /* iOSChallengeDesignSystem.framework */;
 			productType = "com.apple.product-type.framework";
@@ -262,6 +280,9 @@
 				ACC5F3152B8D4223008060DC /* PBXTargetDependency */,
 			);
 			name = iOSChallengeDesignSystemTests;
+			packageProductDependencies = (
+				ACE034182B8FCA40000BB92B /* PreviewSnapshotsTesting */,
+			);
 			productName = iOSChallengeDesignSystemTests;
 			productReference = ACC5F3122B8D4223008060DC /* iOSChallengeDesignSystemTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -293,6 +314,9 @@
 				Base,
 			);
 			mainGroup = ACC5F2FE2B8D4223008060DC;
+			packageReferences = (
+				ACE034152B8FCA40000BB92B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
+			);
 			productRefGroup = ACC5F3092B8D4223008060DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -350,7 +374,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC5F3182B8D4223008060DC /* iOSChallengeDesignSystemTests.swift in Sources */,
+				ACE0341B2B8FCAA1000BB92B /* DSButtonTest.swift in Sources */,
+				ACE0341E2B8FD4BC000BB92B /* Snapshotting+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +644,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ACE034152B8FCA40000BB92B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/doordash-oss/swiftui-preview-snapshots";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ACE034162B8FCA40000BB92B /* PreviewSnapshots */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE034152B8FCA40000BB92B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshots;
+		};
+		ACE034182B8FCA40000BB92B /* PreviewSnapshotsTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ACE034152B8FCA40000BB92B /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */;
+			productName = PreviewSnapshotsTesting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = ACC5F2FF2B8D4223008060DC /* Project object */;
 }

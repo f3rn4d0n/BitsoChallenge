@@ -14,4 +14,5 @@ public class DSColor {
     public static let secondary = Color("Secondary", bundle: Bundle(for: DSColor.self))
     public static let tertiary = Color("Tertiary", bundle: Bundle(for: DSColor.self))
     public static let neutral = Color("Neutral", bundle: Bundle(for: DSColor.self))
+    public static let contrast = Color("Contrast", bundle: Bundle(for: DSColor.self))
 }
