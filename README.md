@@ -1,15 +1,15 @@
-# BitsoChallenge
+# iOSChallenge
 
 ## Description
 
-Bitso challenge project, which lists artworks and provide basic information about them and their artists.  
+iOS challenge project, which lists artworks and provide basic information about them and their artists.  
 
 
 ![Unit testing](Docs/Images/AppRecord.gif)
 
 ## Getting started
 
-To run this project it's necessary to download the current repository and run the `BitsoChallenge.xcworkspace` file, once it's opened, it should download his dependencies, when the download is finished it's necessary to select `BitsoChallenge` as the scheme to run and select the device where you want to run it.
+To run this project it's necessary to download the current repository and run the `iOSChallenge.xcworkspace` file, once it's opened, it should download his dependencies, when the download is finished it's necessary to select `iOSChallenge` as the scheme to run and select the device where you want to run it.
 
 ### Specifications and dependencies:
 
@@ -54,6 +54,6 @@ A design system was created for the unification of all the UI elements.
 
 ## Testing
 - Each framework has its own unit testing, so any framework must to be tested individually
-- For snapshot testing we use swiftui-preview-snapshots dependency, and each screenshot was saved under `BitsoChallenge/BitsoChallengeTests/__Snapshots__/<ViewTest>`, if you delete any of them, the test will fail but a new screenshot will be taken
+- For snapshot testing we use swiftui-preview-snapshots dependency, and each screenshot was saved under `iOSChallenge/iOSChallengeTests/__Snapshots__/<ViewTest>`, if you delete any of them, the test will fail but a new screenshot will be taken
 
 ![Unit testing](Docs/Images/Test.png)

@@ -11,8 +11,6 @@
 		ACC5F3132B8D4223008060DC /* iOSChallengeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3082B8D4223008060DC /* iOSChallengeDesignSystem.framework */; };
 		ACC5F3182B8D4223008060DC /* iOSChallengeDesignSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3172B8D4223008060DC /* iOSChallengeDesignSystemTests.swift */; };
 		ACC5F3192B8D4223008060DC /* iOSChallengeDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC5F30B2B8D4223008060DC /* iOSChallengeDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ACC5F3242B8D423E008060DC /* BitsoChallengeEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3232B8D423E008060DC /* BitsoChallengeEntities.framework */; };
-		ACC5F3252B8D423E008060DC /* BitsoChallengeEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3232B8D423E008060DC /* BitsoChallengeEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ACC5F3282B8D427B008060DC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC5F3272B8D427B008060DC /* Colors.xcassets */; };
 		ACC5F32F2B8D4334008060DC /* DSColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F32E2B8D4334008060DC /* DSColor.swift */; };
 		ACC5F3312B8D4514008060DC /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3302B8D4514008060DC /* Typography.swift */; };
@@ -30,6 +28,8 @@
 		ACC5F3682B8E6F61008060DC /* DSArtworkDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3672B8E6F61008060DC /* DSArtworkDetailView.swift */; };
 		ACC5F36A2B8E6F8E008060DC /* DSArtistDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F3692B8E6F8E008060DC /* DSArtistDetailView.swift */; };
 		ACC5F36C2B8E8595008060DC /* DSErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */; };
+		ACC5F3732B8FB835008060DC /* iOSChallengeEntities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */; };
+		ACC5F3742B8FB835008060DC /* iOSChallengeEntities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				ACC5F3252B8D423E008060DC /* BitsoChallengeEntities.framework in Embed Frameworks */,
+				ACC5F3742B8FB835008060DC /* iOSChallengeEntities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,7 +62,6 @@
 		ACC5F30C2B8D4223008060DC /* iOSChallengeDesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOSChallengeDesignSystem.docc; sourceTree = "<group>"; };
 		ACC5F3122B8D4223008060DC /* iOSChallengeDesignSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSChallengeDesignSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5F3172B8D4223008060DC /* iOSChallengeDesignSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSChallengeDesignSystemTests.swift; sourceTree = "<group>"; };
-		ACC5F3232B8D423E008060DC /* BitsoChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BitsoChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5F3272B8D427B008060DC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		ACC5F32E2B8D4334008060DC /* DSColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSColor.swift; sourceTree = "<group>"; };
 		ACC5F3302B8D4514008060DC /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
@@ -81,6 +80,8 @@
 		ACC5F3672B8E6F61008060DC /* DSArtworkDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtworkDetailView.swift; sourceTree = "<group>"; };
 		ACC5F3692B8E6F8E008060DC /* DSArtistDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtistDetailView.swift; sourceTree = "<group>"; };
 		ACC5F36B2B8E8595008060DC /* DSErrorAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSErrorAlert.swift; sourceTree = "<group>"; };
+		ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC5F38A2B8FBF4D008060DC /* iOSChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACC5F3242B8D423E008060DC /* BitsoChallengeEntities.framework in Frameworks */,
+				ACC5F3732B8FB835008060DC /* iOSChallengeEntities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +148,8 @@
 		ACC5F3222B8D423E008060DC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ACC5F3232B8D423E008060DC /* BitsoChallengeEntities.framework */,
+				ACC5F38A2B8FBF4D008060DC /* iOSChallengeEntities.framework */,
+				ACC5F3722B8FB835008060DC /* iOSChallengeEntities.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -557,7 +559,6 @@
 		ACC5F3202B8D4223008060DC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94L48M7HD;
@@ -574,7 +575,6 @@
 		ACC5F3212B8D4223008060DC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = T94L48M7HD;

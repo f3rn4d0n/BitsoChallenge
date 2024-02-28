@@ -1,6 +1,6 @@
 //
 //  DSImage.swift
-//  BitsoChallenge
+//  iOSChallenge
 //
 //  Created by Luis Fernando Bustos Ramírez on 13/02/24.
 //

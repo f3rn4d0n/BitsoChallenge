@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import BitsoChallengeEntities
+import iOSChallengeEntities
 
 public struct DSErrorAlert: View {
     
