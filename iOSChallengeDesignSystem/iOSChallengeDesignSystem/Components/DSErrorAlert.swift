@@ -6,25 +6,15 @@
 //
 
 import SwiftUI
+import BitsoChallengeEntities
 
 public struct DSErrorAlert: View {
     
-    var title: String
-    var message: String
-    var firstActionTitle: String
-    var firstAction: (() -> (Void))
-    var secondActionTitle: String
-    var secondAction: (() -> (Void))
+    var error: ErrorDetail
     
-    public init(title: String, message: String, firstActionTitle: String, firstAction: @escaping (() -> (Void)), secondActionTitle: String, secondAction: @escaping (() -> (Void))) {
-        self.title = title
-        self.message = message
-        self.firstActionTitle = firstActionTitle
-        self.firstAction = firstAction
-        self.secondActionTitle = secondActionTitle
-        self.secondAction = secondAction
+    public init(error: ErrorDetail) {
+        self.error = error
     }
-    
     
     public var body: some View {
         VStack {
@@ -33,51 +23,57 @@ public struct DSErrorAlert: View {
                 .frame(width: DSSize.bigger.floatValue, height: DSSize.bigger.floatValue)
                 .foregroundStyle(DSColor.neutral)
                 .padding()
-            Text(title)
+            Text(error.title)
                 .lineLimit(2)
                 .multilineTextAlignment(.center)
                 .font(Typography.boldX.font)
                 .foregroundStyle(DSColor.neutral)
-            Text(message)
+            Text(error.detail)
                 .lineLimit(8)
                 .multilineTextAlignment(.center)
-                .font(Typography.regularM.font)
+                .font(Typography.regularX.font)
                 .foregroundStyle(DSColor.neutral)
-                .padding()
+                .padding(.horizontal)
+                .padding(.bottom)
+                .padding(.top, DSSize.minimum.floatValue)
             DSButton(
                 style: .mainly,
                 icon: nil,
-                message: firstActionTitle,
-                action: firstAction
+                message: error.firstAction.title,
+                action: error.firstAction.action
             )
             .padding(.horizontal)
-            DSButton(
-                style: .secondary,
-                icon: nil,
-                message: secondActionTitle,
-                action: secondAction
-            )
-            .padding()
+            .padding(.bottom)
+            if let action = error.secondAction {
+                DSButton(
+                    style: .secondary,
+                    icon: nil,
+                    message: action.title,
+                    action: action.action
+                )
+                .padding(.horizontal)
+                .padding(.bottom)
+            }
         }
         .background(DSColor.secondary)
         .cornerRadius(DSSize.normal.floatValue)
         .padding()
-        
     }
 }
 
 #Preview {
     Typography.registerFonts()
     return DSErrorAlert(
-        title: "Alert title",
-        message: "We found some problems getting your information, do you whant to try again?",
-        firstActionTitle: "Try again",
-        firstAction: {
-            print("Try again")
-        },
-        secondActionTitle: "Cancel",
-        secondAction: {
-            print("Cancel")
-        }
+        error: .init(
+            title: "Alert title",
+            detail: "We found some problems getting your information, do you whant to try again?",
+            firstAction: ErrorDetailAction(
+                title: "Try again",
+                action: {
+                    print("Try again")
+                }
+            ),
+            secondAction: ErrorDetailAction(title: "Cancel")
+        )
     )
 }

@@ -38,9 +38,9 @@ public struct DSButton: View {
     var style: DSButtonStyle
     var icon: Image?
     var message: String
-    var action: (() -> (Void))
+    var action: (() async -> Void)?
     
-    public init(style: DSButtonStyle, icon: Image? = nil, message: String, action: @escaping (() -> (Void))) {
+    public init(style: DSButtonStyle, icon: Image? = nil, message: String, action:  (() async -> Void)? = nil) {
         self.style = style
         self.icon = icon
         self.message = message
@@ -49,7 +49,9 @@ public struct DSButton: View {
     
     public var body: some View {
         Button(action: {
-            self.action()
+            Task {
+                await self.action?()
+            }
         }, label: {
             HStack {
                 Spacer()
