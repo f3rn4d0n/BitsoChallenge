@@ -24,25 +24,44 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
     
     var body: some View {
         NavigationStack(path: $path) {
-            List {
-                ForEach(data: viewModel.model.artworks) { index, artwork in
-                    DSCellView(
-                        title: artwork.title,
-                        message: artwork.description,
-                        imageURL: artwork.thumbnail,
-                        style: index % 2 == 0 ? .primary : .secondary) {
-                            path.append(ArtworksRouterEntity.detail(artwork: artwork))
-                        }
+            ZStack {
+                List {
+                    ForEach(data: viewModel.model.artworks) { index, artwork in
+                        DSCellView(
+                            title: artwork.title,
+                            message: artwork.description,
+                            imageURL: artwork.thumbnail,
+                            style: index % 2 == 0 ? .primary : .secondary) {
+                                path.append(ArtworksRouterEntity.detail(artwork: artwork))
+                            }
+                            .onAppear {
+                                Task{
+                                    await viewModel.downloadArtworks(current: artwork)
+                                }
+                            }
+                    }
+                }
+                .refreshable {
+                    Task{
+                        await viewModel.reloadArtworks()
+                    }
+                }
+                .overlay {
+                    if viewModel.model.artworks.isEmpty {
+                        DSContentUnavailableView(
+                            title: "No artworks founded",
+                            systemImage: "book.fill",
+                            description: "Pull to refresh"
+                        )
                         .onAppear {
                             Task{
-                                await viewModel.downloadArtworks(current: artwork)
+                                await viewModel.requestLocalArtworks()
                             }
                         }
+                    }
                 }
-            }
-            .refreshable {
-                Task{
-                    await viewModel.reloadArtworks()
+                if let error = viewModel.model.error {
+                    DSErrorAlert(error: error)
                 }
             }
             .navigationDestination(for: ArtworksRouterEntity.self) { option in
@@ -61,20 +80,6 @@ struct ArtworksView<ViewModel: ArtworksViewModel, Router: ArtworksRouterType>: V
                             Task {
                                 await viewModel.clearDataBase()
                             }
-                        }
-                    }
-                }
-            }
-            .overlay {
-                if viewModel.model.artworks.isEmpty {
-                    DSContentUnavailableView(
-                        title: "No artworks founded",
-                        systemImage: "book.fill",
-                        description: "Pull to refresh"
-                    )
-                    .onAppear {
-                        Task{
-                            await viewModel.requestLocalArtworks()
                         }
                     }
                 }
