@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public struct DSArtworkDetailView: View {
     
@@ -52,12 +53,24 @@ public struct DSArtworkDetailView: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSArtworkDetailView(
-        image: "https://www.artic.edu/iiif/2/832befc5-3f12-a21f-1bdc-8f776a7f37e2/full/843,/0/default.jpg",
-        date:  "2024",
-        author: "Greeks",
-        detail: "Cotton, wool, silk, wild silk, cotton (mercerized), cellulose acetate, rayon, and linen, plain weave with discontinuous wefts; cut and knotted warp fringe"
-    )
+struct DSArtworkDetailView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<(String?, String?, String?)> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: DSArtworkDetailView_Previews.configuration,
+            configure: { content in
+                return DSArtworkDetailView(
+                    image: content.0,
+                    date: content.1,
+                    author: content.2,
+                    detail: "Cotton, wool, silk, wild silk, cotton (mercerized), cellulose acetate, rayon, and linen, plain weave with discontinuous wefts; cut and knotted warp fringe"
+                )
+            }
+        )
+    }
 }

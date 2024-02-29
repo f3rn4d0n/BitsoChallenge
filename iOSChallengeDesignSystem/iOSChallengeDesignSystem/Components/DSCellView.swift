@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public enum DSCellStyleView {
     case primary
@@ -84,14 +85,34 @@ public struct DSCellView: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSCellView(
-        title: "Title of piece of art",
-        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere massa nunc, ac congue mauris ultricies non. Nulla vitae faucibus lorem, interdum ullamcorper nibh. Morbi molestie sagittis tellus in accumsan. Vivamus hendrerit risus sem, nec mollis ipsum luctus vitae. Mauris quis dui finibus, sagittis ex sit amet, rutrum turpis. Praesent in bibendum nisl. Aenean id accumsan ex, et eleifend ante. Maecenas laoreet rhoncus eros, eu volutpat elit viverra eget. Donec nec tempus ante, mollis tempus elit. Sed vulputate lacus tortor, at sollicitudin augue varius sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eu malesuada risus.",
-        imageURL: "https://www.artic.edu/iiif/2/021d3847-e0b1-2bc5-f3a6-282229b86a29/full/40,/0/default.jpg",
-        callToAction: "Click to see more",
-        style: .primary) {
-            print("See more")
-        }
+struct DSCellView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<DSCellStyleView> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: [
+                .init(name: "Primary", state: .primary),
+                .init(name: "Secondary", state: .secondary)
+            ],
+            configure: { style in
+                return ZStack{
+                    DSColor.contrast
+                        .edgesIgnoringSafeArea(.all)
+                    DSCellView(
+                        title: "Title of piece of art",
+                        message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere massa nunc, ac congue mauris ultricies non. Nulla vitae faucibus lorem, interdum ullamcorper nibh. Morbi molestie sagittis tellus in accumsan. Vivamus hendrerit risus sem, nec mollis ipsum luctus vitae. Mauris quis dui finibus, sagittis ex sit amet, rutrum turpis. Praesent in bibendum nisl. Aenean id accumsan ex, et eleifend ante. Maecenas laoreet rhoncus eros, eu volutpat elit viverra eget. Donec nec tempus ante, mollis tempus elit. Sed vulputate lacus tortor, at sollicitudin augue varius sit amet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus eu malesuada risus.",
+                        imageURL: "https://www.artic.edu/iiif/2/021d3847-e0b1-2bc5-f3a6-282229b86a29/full/40,/0/default.jpg",
+                        callToAction: "Click to see more",
+                        style: style) {
+                            print("See more")
+                        }
+                        .padding()
+                }
+            }
+        )
+    }
 }

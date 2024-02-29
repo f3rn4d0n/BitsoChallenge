@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC58F98D2B90F09C0051F002 /* DSErrorAlert_Previews+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58F98C2B90F09C0051F002 /* DSErrorAlert_Previews+Extension.swift */; };
+		AC58F98F2B90F0EC0051F002 /* DSArtistDetailView_Previews+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58F98E2B90F0EC0051F002 /* DSArtistDetailView_Previews+Extension.swift */; };
+		AC58F9912B90F1190051F002 /* DSArtworkDetailView_Previews+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC58F9902B90F1190051F002 /* DSArtworkDetailView_Previews+Extension.swift */; };
 		ACC5F30D2B8D4223008060DC /* iOSChallengeDesignSystem.docc in Sources */ = {isa = PBXBuildFile; fileRef = ACC5F30C2B8D4223008060DC /* iOSChallengeDesignSystem.docc */; };
 		ACC5F3132B8D4223008060DC /* iOSChallengeDesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACC5F3082B8D4223008060DC /* iOSChallengeDesignSystem.framework */; };
 		ACC5F3192B8D4223008060DC /* iOSChallengeDesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = ACC5F30B2B8D4223008060DC /* iOSChallengeDesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +36,12 @@
 		ACE034192B8FCA40000BB92B /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = ACE034182B8FCA40000BB92B /* PreviewSnapshotsTesting */; };
 		ACE0341B2B8FCAA1000BB92B /* DSButtonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */; };
 		ACE0341E2B8FD4BC000BB92B /* Snapshotting+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0341D2B8FD4BB000BB92B /* Snapshotting+Extension.swift */; };
+		ACE034202B8FD645000BB92B /* DSCellViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE0341F2B8FD645000BB92B /* DSCellViewTest.swift */; };
+		ACE034222B8FD77E000BB92B /* DSContentUnavailableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE034212B8FD77E000BB92B /* DSContentUnavailableViewTest.swift */; };
+		ACE034242B8FD8F7000BB92B /* DSArtworkDetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE034232B8FD8F7000BB92B /* DSArtworkDetailViewTest.swift */; };
+		ACE034262B8FD914000BB92B /* DSArtistDetailViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE034252B8FD914000BB92B /* DSArtistDetailViewTest.swift */; };
+		ACE034282B8FD91D000BB92B /* DSErrorAlertTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE034272B8FD91D000BB92B /* DSErrorAlertTest.swift */; };
+		ACE0342A2B8FD935000BB92B /* DSImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE034292B8FD935000BB92B /* DSImageTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +69,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AC58F98C2B90F09C0051F002 /* DSErrorAlert_Previews+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSErrorAlert_Previews+Extension.swift"; sourceTree = "<group>"; };
+		AC58F98E2B90F0EC0051F002 /* DSArtistDetailView_Previews+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSArtistDetailView_Previews+Extension.swift"; sourceTree = "<group>"; };
+		AC58F9902B90F1190051F002 /* DSArtworkDetailView_Previews+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSArtworkDetailView_Previews+Extension.swift"; sourceTree = "<group>"; };
 		ACC5F3082B8D4223008060DC /* iOSChallengeDesignSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = iOSChallengeDesignSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC5F30B2B8D4223008060DC /* iOSChallengeDesignSystem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iOSChallengeDesignSystem.h; sourceTree = "<group>"; };
 		ACC5F30C2B8D4223008060DC /* iOSChallengeDesignSystem.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = iOSChallengeDesignSystem.docc; sourceTree = "<group>"; };
@@ -86,6 +98,12 @@
 		ACC5F38A2B8FBF4D008060DC /* iOSChallengeEntities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = iOSChallengeEntities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSButtonTest.swift; sourceTree = "<group>"; };
 		ACE0341D2B8FD4BB000BB92B /* Snapshotting+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Snapshotting+Extension.swift"; sourceTree = "<group>"; };
+		ACE0341F2B8FD645000BB92B /* DSCellViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSCellViewTest.swift; sourceTree = "<group>"; };
+		ACE034212B8FD77E000BB92B /* DSContentUnavailableViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSContentUnavailableViewTest.swift; sourceTree = "<group>"; };
+		ACE034232B8FD8F7000BB92B /* DSArtworkDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtworkDetailViewTest.swift; sourceTree = "<group>"; };
+		ACE034252B8FD914000BB92B /* DSArtistDetailViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSArtistDetailViewTest.swift; sourceTree = "<group>"; };
+		ACE034272B8FD91D000BB92B /* DSErrorAlertTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSErrorAlertTest.swift; sourceTree = "<group>"; };
+		ACE034292B8FD935000BB92B /* DSImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSImageTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +128,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AC58F98B2B90F0740051F002 /* SnapshotConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				AC58F98C2B90F09C0051F002 /* DSErrorAlert_Previews+Extension.swift */,
+				AC58F98E2B90F0EC0051F002 /* DSArtistDetailView_Previews+Extension.swift */,
+				AC58F9902B90F1190051F002 /* DSArtworkDetailView_Previews+Extension.swift */,
+			);
+			path = SnapshotConfigurations;
+			sourceTree = "<group>";
+		};
 		ACC5F2FE2B8D4223008060DC = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +160,8 @@
 		ACC5F30A2B8D4223008060DC /* iOSChallengeDesignSystem */ = {
 			isa = PBXGroup;
 			children = (
-				ACC5F3622B8E5117008060DC /* Extensions */,
 				ACC5F3472B8D8123008060DC /* Info.plist */,
+				ACC5F3622B8E5117008060DC /* Extensions */,
 				ACC5F32D2B8D4324008060DC /* Fundation */,
 				ACC5F32C2B8D42BE008060DC /* Components */,
 				ACC5F3292B8D427F008060DC /* Assets */,
@@ -147,7 +175,13 @@
 			isa = PBXGroup;
 			children = (
 				ACE0341C2B8FD497000BB92B /* Configuration */,
+				ACE034292B8FD935000BB92B /* DSImageTest.swift */,
 				ACE0341A2B8FCAA1000BB92B /* DSButtonTest.swift */,
+				ACE0341F2B8FD645000BB92B /* DSCellViewTest.swift */,
+				ACE034212B8FD77E000BB92B /* DSContentUnavailableViewTest.swift */,
+				ACE034232B8FD8F7000BB92B /* DSArtworkDetailViewTest.swift */,
+				ACE034252B8FD914000BB92B /* DSArtistDetailViewTest.swift */,
+				ACE034272B8FD91D000BB92B /* DSErrorAlertTest.swift */,
 			);
 			path = iOSChallengeDesignSystemTests;
 			sourceTree = "<group>";
@@ -172,6 +206,7 @@
 		ACC5F32C2B8D42BE008060DC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				AC58F98B2B90F0740051F002 /* SnapshotConfigurations */,
 				ACC5F35D2B8D966B008060DC /* DSImage.swift */,
 				ACC5F3432B8D4C1C008060DC /* DSButton.swift */,
 				ACC5F35B2B8D94A9008060DC /* DSCellView.swift */,
@@ -355,17 +390,20 @@
 			files = (
 				ACC5F3422B8D4968008060DC /* TypographyDescription.swift in Sources */,
 				ACC5F3462B8D50C1008060DC /* DSSize.swift in Sources */,
+				AC58F9912B90F1190051F002 /* DSArtworkDetailView_Previews+Extension.swift in Sources */,
 				ACC5F35E2B8D966B008060DC /* DSImage.swift in Sources */,
 				ACC5F3402B8D4939008060DC /* TypographyType.swift in Sources */,
 				ACC5F30D2B8D4223008060DC /* iOSChallengeDesignSystem.docc in Sources */,
 				ACC5F3312B8D4514008060DC /* Typography.swift in Sources */,
 				ACC5F3642B8E5135008060DC /* ForEach+Extension.swift in Sources */,
+				AC58F98D2B90F09C0051F002 /* DSErrorAlert_Previews+Extension.swift in Sources */,
 				ACC5F3442B8D4C1C008060DC /* DSButton.swift in Sources */,
 				ACC5F36C2B8E8595008060DC /* DSErrorAlert.swift in Sources */,
 				ACC5F3662B8E64A8008060DC /* DSContentUnavailableView.swift in Sources */,
 				ACC5F35C2B8D94A9008060DC /* DSCellView.swift in Sources */,
 				ACC5F36A2B8E6F8E008060DC /* DSArtistDetailView.swift in Sources */,
 				ACC5F32F2B8D4334008060DC /* DSColor.swift in Sources */,
+				AC58F98F2B90F0EC0051F002 /* DSArtistDetailView_Previews+Extension.swift in Sources */,
 				ACC5F3682B8E6F61008060DC /* DSArtworkDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,8 +412,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACE034242B8FD8F7000BB92B /* DSArtworkDetailViewTest.swift in Sources */,
+				ACE034262B8FD914000BB92B /* DSArtistDetailViewTest.swift in Sources */,
+				ACE034282B8FD91D000BB92B /* DSErrorAlertTest.swift in Sources */,
 				ACE0341B2B8FCAA1000BB92B /* DSButtonTest.swift in Sources */,
 				ACE0341E2B8FD4BC000BB92B /* Snapshotting+Extension.swift in Sources */,
+				ACE034222B8FD77E000BB92B /* DSContentUnavailableViewTest.swift in Sources */,
+				ACE0342A2B8FD935000BB92B /* DSImageTest.swift in Sources */,
+				ACE034202B8FD645000BB92B /* DSCellViewTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

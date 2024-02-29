@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public struct DSContentUnavailableView: View {
     
@@ -30,11 +31,25 @@ public struct DSContentUnavailableView: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSContentUnavailableView(
-        title: "No artworks founded",
-        systemImage: "book.fill",
-        description: "Pull to refresh"
-    )
+struct DSContentUnavailableView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: [
+                .init(name: "Normal", state: "Pull to refresh")
+            ],
+            configure: { message in
+                return DSContentUnavailableView(
+                    title: "No artworks founded",
+                    systemImage: "book.fill",
+                    description: message
+                )
+            }
+        )
+    }
 }

@@ -18,7 +18,7 @@ extension Snapshotting where Value: SwiftUI.View, Format == UIImage {
         ])
         
         return .image(
-            layout: .fixed(width: 400, height: 400),
+            layout: .fixed(width: 400, height: 500),
             traits: traits
         )
     }

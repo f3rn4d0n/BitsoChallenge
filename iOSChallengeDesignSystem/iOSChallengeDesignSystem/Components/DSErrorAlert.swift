@@ -7,6 +7,7 @@
 
 import SwiftUI
 import iOSChallengeEntities
+import PreviewSnapshots
 
 public struct DSErrorAlert: View {
     
@@ -66,19 +67,19 @@ public struct DSErrorAlert: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSErrorAlert(
-        error: .init(
-            title: "Alert title",
-            detail: "We found some problems getting your information, do you whant to try again?",
-            firstAction: ErrorDetailAction(
-                title: "Try again",
-                action: {
-                    print("Try again")
-                }
-            ),
-            secondAction: ErrorDetailAction(title: "Cancel")
+struct DSErrorAlert_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<ErrorDetail> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: DSErrorAlert_Previews.configuration,
+            configure: { alertDetail in
+                return DSErrorAlert(error: alertDetail)
+            }
         )
-    )
+    }
 }

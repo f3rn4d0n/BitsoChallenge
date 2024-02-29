@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public struct DSArtistDetailView: View {
     
@@ -51,12 +52,24 @@ public struct DSArtistDetailView: View {
     }
 }
 
-#Preview {
-    Typography.registerFonts()
-    return DSArtistDetailView(
-        title: "Leonardo da Vinci",
-        period: "15 April 1452 – 2 May 1519",
-        pseudonymous: "- El gran caballo\n- Payne",
-        description: "Leonardo di ser Piero da Vinci (15 April 1452 – 2 May 1519) was an Italian polymath of the High Renaissance who was active as a painter, draughtsman, engineer, scientist, theorist, sculptor, and architect. While his fame initially rested on his achievements as a painter, he has also become known for his notebooks, in which he made drawings and notes on a variety of subjects, including anatomy, astronomy, botany, cartography, painting, and paleontology. Leonardo is widely regarded to have been a genius who epitomized the Renaissance humanist ideal, and his collective works comprise a contribution to later generations of artists matched only by that of his younger contemporary Michelangelo"
-    )
+struct DSArtistDetailView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<(String?, String?, String?, String?)> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: DSArtistDetailView_Previews.configuration,
+            configure: { content in
+                return DSArtistDetailView(
+                    title: content.0,
+                    period: content.1,
+                    pseudonymous: content.2,
+                    description: content.3
+                )
+            }
+        )
+    }
 }

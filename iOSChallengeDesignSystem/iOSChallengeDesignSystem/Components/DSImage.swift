@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import PreviewSnapshots
 
 public struct DSImage: View {
     
@@ -25,30 +26,48 @@ public struct DSImage: View {
                         ProgressView()
                     }
                 case .success(let image):
-                    image.resizable()
-                case .failure(let imageError):
-                    Image(systemName: "person.crop.circle.badge.questionmark.fill")
+                    image
                         .resizable()
-                        .padding()
+                        .aspectRatio(contentMode: .fit)
+                case .failure(let imageError):
+                    missingImage
                         .onAppear{
                             print("for \(urlString) error:\(imageError.localizedDescription)")
                         }
                 @unknown default:
-                    Image(systemName: "person.crop.circle.badge.questionmark.fill")
-                        .resizable()
-                        .padding()
+                    missingImage
                 }
             }
         } else {
-            Image(systemName: "person.crop.circle.badge.questionmark.fill")
-                .resizable()
-                .padding()
+            missingImage
         }
+    }
+    
+    private var missingImage: some View {
+        return Image(systemName: "person.crop.circle.badge.questionmark.fill")
+            .resizable()
+            .aspectRatio(contentMode: .fit)
+            .padding()
     }
 }
 
-#Preview {
-    DSImage(
-        imageURL: "https://www.artic.edu/iiif/2/4e0fc7a7-9c88-22a8-4a55-a31ed527473d/full/843,/0/default.jpg"
-    )
+struct DSImage_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        snapshots.previews.previewLayout(.sizeThatFits)
+    }
+    
+    static var snapshots: PreviewSnapshots<String?> {
+        Typography.registerFonts()
+        return PreviewSnapshots(
+            configurations: [
+                .init(name: "Image", state: "https://www.artic.edu/iiif/2/4e0fc7a7-9c88-22a8-4a55-a31ed527473d/full/843,/0/default.jpg"),
+                .init(name: "Empty Image", state: nil),
+                .init(name: "Wrong url", state: "https://www.artic.edu/"),
+            ],
+            configure: { imageUrl in
+                return DSImage(imageURL: imageUrl)
+            }
+        )
+    }
 }
