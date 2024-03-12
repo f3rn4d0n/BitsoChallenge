@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:iOSChallengeEntities/iOSChallengeEntities.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSChallengeDesignSystem/iOSChallengeDesignSystem.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSChallengeDomain/iOSChallengeDomain.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSChallenge/../iOSChallengeData/iOSChallengeData.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:iOSChallenge/iOSChallenge.xcodeproj">
+   </FileRef>
+</Workspace>
